@@ -1,0 +1,115 @@
+# robotstxt.org/
+# 
+# 
+# 
+# User-agent: Googlebot
+# Disallow: 
+# 
+# 
+# 
+# User-agent: googlebot-image
+# Disallow: 
+# 
+# 
+# 
+# User-agent: googlebot-mobile
+# Disallow: 
+# 
+# 
+# 
+# User-agent: MSNBot
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Slurp
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Teoma
+# Disallow: 
+# 
+# 
+# 
+# User-agent: twiceler
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Gigabot
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Scrubby
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Robozilla
+# Disallow: 
+# 
+# 
+# 
+# User-agent: Nutch
+# Disallow: 
+# 
+# 
+# 
+# User-agent: ia_archiver
+# Disallow: 
+# 
+# 
+# 
+# User-agent: baiduspider
+# Disallow: 
+# 
+# 
+# 
+# User-agent: naverbot
+# Disallow: 
+# 
+# 
+# 
+# User-agent: yeti
+# Disallow: 
+# 
+# 
+# 
+# User-agent: yahoo-mmcrawler
+# Disallow: 
+# 
+# 
+# 
+# User-agent: psbot
+# Disallow: 
+# 
+# 
+# 
+# User-agent: asterias
+# Disallow: 
+# 
+# 
+# 
+# User-agent: yahoo-blogs/v3.9
+# Disallow: 
+# 
+# 
+# 
+# User-agent: duggmirror
+# Disallow: 
+# 
+# 
+# 
+# Sitemap: http://www.example.com/sitemap.index.xml or http://www.example.com/sitemap.xml
+
+User-agent: *
+Disallow: /admin/
+Disallow: /inc/
+Disallow: /data/
+Disallow: /*?*
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.gz$
+Sitemap: http://www.fenqimall.com/sitemap.index.xml

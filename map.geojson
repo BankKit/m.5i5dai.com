@@ -1,0 +1,43 @@
+{
+	
+	"type": "FeatureCollection",
+	
+	"features": [
+		
+		{
+			
+			"type": "Feature",
+			
+			"geometry": {
+			
+				"type": "Point",
+				
+				"coordinates": [
+					
+					121.43436,
+					
+					31.23967
+					
+				]
+				
+			},
+			
+			"properties": {
+			
+				"marker-size": "medium",
+				
+				"marker-symbol": "building",
+				
+				"marker-color": "#ace",
+				
+				"组织": "亨元金融",
+				
+				"地址": "中国上海市静安区安元路555号静安门大厦808室"
+				
+			}
+			
+		}
+		
+	]
+	
+}

@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+a, a:link {
+	
+	display: block;
+	
+	color: #333;
+	
+	background: none;
+	
+}
+
+a:active {
+
+	color: #666;
+
+}
+
+a:focus, a:visited {
+	
+	outline: 0;
+	
+	text-decoration: none !important;
+	
+}
+
+a img {
+	
+	border: 0;
+	
+	outline: 0;
+	
+}

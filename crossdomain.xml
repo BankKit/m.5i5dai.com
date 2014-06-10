@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE cross-domain-policy SYSTEM "http://www.adobe.com/xml/dtds/cross-domain-policy.dtd">
+
+<cross-domain-policy>
+	
+	<!-- Read this: www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html -->
+	
+	<!-- Begin | Most restrictive policy | permitted-cross-domain-policies=[ "none" | "master-only" | "by-ftp-filename" | "all" ] -->
+		
+		<site-control permitted-cross-domain-policies="none"/>
+		
+	<!-- End | Most restrictive policy -->
+	
+	<!-- Begin | Least restrictive policy -->
+		
+		<!--
+		
+		<allow-access-from domain="*" to-ports="*" secure="false"/>
+		
+		<allow-http-request-headers-from domain="*" headers="*" secure="false"/>
+		
+		-->
+		
+	<!-- End | Least restrictive policy -->
+	
+</cross-domain-policy>

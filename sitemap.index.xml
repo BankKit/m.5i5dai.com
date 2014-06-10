@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sitemapindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			
+			xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd"
+			
+			xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<!-- If you do provide multiple Sitemaps, you should then list each Sitemap file in a Sitemap index file. Sitemap index files may not list more than 50,000 Sitemaps and must be no larger than 10MB (10,485,760 bytes) and can be compressed. You can have more than one Sitemap index file. -->
+	
+	<!-- A Sitemap index file can only specify Sitemaps that are found on the same site as the Sitemap index file. For example, http://www.yoursite.com/sitemap_index.xml can include Sitemaps on http://www.yoursite.com but not on http://www.example.com or http://yourhost.yoursite.com. As with Sitemaps, your Sitemap index file must be UTF-8 encoded. -->
+	
+	<sitemap>
+		
+		<loc>sitemap/sitemap.1.xml</loc> <!-- This location can be a Sitemap, an Atom file, RSS file or a simple text file. eg: http://www.example.com/sitemap1.xml -->
+		
+		<lastmod>2013-12-21T23:32:00+08:00</lastmod> <!-- [W3C Datetime format, eg: YYYY-MM-DDThh:mm:ss.sTZD](http://www.w3.org/TR/NOTE-datetime), 2004-10-01T18:23:17+00:00; Or, eg: 2004-10-01T18:23:17+00:00 -->
+		
+	</sitemap>
+	
+</sitemapindex>

@@ -1,0 +1,249 @@
+//
+
+	Build Passing.
+	
+	Doctype: HTML5
+	
+	Jade: 1.3.0
+	
+	#TODO[x]: Basic Apple-Specific Meta Tag
+		
+		'apple-mobile-web-app-capable',
+			sets whether a web application runs in full-screen mode. The 
+			' apple-touch-fullscreen ' alias is obsolete. It was never 
+			officially supported. As of iOS 7, it no longer works. 
+			Don’t use it.
+		
+		'apple-mobile-web-app-status-bar-style'
+			sets the style of the status bar for a web application.
+			eg: content="default"|"black"|"black-translucent".
+		
+		'apple-mobile-web-app-title', IOS6+
+		
+		'format-detection'
+	
+	#TODO[x]: Basic Setup Example
+		
+		- var basic = {
+			
+			'apple-mobile-web-app-capable': 'yes',
+			
+			'apple-mobile-web-app-status-bar-style': 'black',
+			
+			'apple-mobile-web-app-title': '',
+			
+			'format-detection': 'telephone=yes'
+			
+		}
+	
+	#TODO[x]: Apple Touch Icon ( Webpage Icons for Web Clip ):
+		
+		<link rel="apple-touch-icon" href="apple-touch-icon.png">,
+			non-Retina iPhone, iPod Touch, and Android 2.1+ devices
+		
+		sizes="57x57",
+			non-Retina iPhone, iPod Touch, and Android 2.1+ devices
+		
+		sizes="72x72",
+			iOS ≤ 6, iPad mini and the first- and second-generation iPad
+		
+		sizes="76x76",
+			iOS7+, iPad mini and the first- and second-generation iPad
+		
+		sizes="114x114",
+			iOS ≤ 6, iPhone with high-resolution Retina display
+		
+		sizes="120x120",
+			iOS7+, Retina-display iPhones
+		
+		sizes="144x144",
+			iOS ≤ 6, iPad with high-resolution Retina display
+		
+		sizes="152x152",
+			iOS7+, Retina-display iPad
+		
+	#TODO[x]: Touch Icon Setup Example
+		
+		- var icon = [
+			
+			'57x57',
+			
+			'72x72',
+			
+			'76x76',
+			
+			'114x114',
+			
+			'120x120',
+			
+			'144x144',
+			
+			'152x152'
+			
+		]
+	
+	#TODO[x]: Apple Startup Image ( In order to use a startup image,
+		your page must be web app capable. That means setting the 
+		apple-mobile-web-app-capable meta attribute. )
+		
+		size='320x460', iPhone
+		
+		size='640x920', iPhone, retina
+		
+		size='640x1096', iPhone 5/5s
+		
+		size='768x1004', iPad, portrait
+		
+		size='748x1024', iPad, landscape
+		
+		size='1536x2008', iPad, retina, portrait
+		
+		size='1496x2048', iPad, retina, landscape
+	
+	#TODO[x]: Startup Image Setup Example
+		
+		- var image = {
+			
+			a: {
+				
+				size: '320x460',
+				
+				media: '(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)'
+				
+			},
+			
+			b: {
+				
+				size: '640x920',
+				
+				media: '(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)'
+				
+			},
+			
+			c: {
+				
+				size: '640x1096',
+				
+				media: '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'
+				
+			},
+			
+			d: {
+				
+				size: '768x1004',
+				
+				media: '(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)'
+				
+			},
+			
+			e: {
+				
+				size: '748x1024',
+				
+				media: '(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)'
+				
+			},
+			
+			f: {
+				
+				size: '1536x2008',
+				
+				media: '(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)'
+				
+			},
+			
+			g: {
+				
+				size: '1496x2048',
+				
+				media: '(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)'
+				
+			}
+			
+		}
+
+	Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+
+	Version: 0.1.0-alpha
+
+	Creation Date: ~ ( Tony ).
+
+	Last Update: 2014.05.10 14:11 ( Tony ).
+
+
+
+- var opts = {href: true, basic: true, icon: true, image: false, iconPrefix: 'apple-touch-icon', imagePrefix: 'apple-touch-startup-image'}
+
+- var baseUrl = '../'
+
+- var basic = {'apple-mobile-web-app-capable': 'yes', 'apple-mobile-web-app-status-bar-style': 'black', 'apple-mobile-web-app-title': '亨元后台', 'format-detection': 'telephone=yes'}
+
+- var icon = ['57x57', '72x72', '76x76', '114x114', '120x120', '144x144', '152x152']
+
+- var image = {a: {size: '320x460', media: '(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 1)'}, b: {size: '640x920', media: '(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)'}, c: {size: '640x1096', media: '(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)'}, d: {size: '768x1004', media: '(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)'}, e: {size: '748x1024', media: '(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1)'}, f: {size: '1536x2008', media: '(device-width: 768px) and (device-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)'}, g: {size: '1496x2048', media: '(device-width: 768px) and (device-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)'}}
+
+
+
+mixin set_basic_apple_meta()
+
+	each val, index in basic
+
+		meta(name=index, content=val)
+
+
+
+mixin set_touch_icon()
+
+	- for (var i = 0; i <= icon.length; i++)
+
+		if !opts.href
+
+			if i === 0
+
+				link(rel = opts.iconPrefix, href = '')
+
+			else
+
+				link(rel = opts.iconPrefix, sizes = icon[i-1], href = '')
+
+		else
+
+			- var icon_name = opts.iconPrefix + '-' + icon[i-1] + '.png'
+
+			if i === 0
+
+				link(rel = opts.iconPrefix, href = baseUrl + 'apple-touch-icon.png')
+
+			else
+
+				link(rel = opts.iconPrefix, sizes = icon[i-1], href = baseUrl + icon_name)
+
+
+
+mixin set_startup_image()
+
+	if !opts.href
+
+		each val, index in image
+
+			link(rel = opts.imagePrefix, href = '', media = val.media)
+
+	else
+
+		each val, index in image
+
+			link(rel = opts.imagePrefix, href = baseUrl + opts.imagePrefix + '-' + val.size + '.png', media = val.media)
+
+
+
+if opts.basic
+
+	+set_basic_apple_meta()
+
+if opts.icon
+
+	+set_touch_icon()
+
+if opts.image
+
+	+set_startup_image()

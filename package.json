@@ -1,0 +1,30 @@
+{
+  "name": "m.5i5dai.com",
+  "version": "0.1.0",
+  "author": {
+    "name": "沈维忠 ( Shen Weizhong / Tony Stark )",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/Tony-Stark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hengyuan-Finance/m.5i5dai.com.git"
+  },
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-coffeelint": "0.0.10",
+    "grunt-contrib-coffee": "^0.10.1",
+    "grunt-contrib-htmlmin": "^0.3.0",
+    "grunt-contrib-jade": "^0.12.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "license": "GPL-V3"
+}

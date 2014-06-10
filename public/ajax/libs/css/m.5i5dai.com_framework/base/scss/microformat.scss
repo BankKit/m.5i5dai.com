@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of microformat.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.22 16:01 ( Tony ).
+ * 
+ * Last Update: 2014.04.24 16:02 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+.vcard {
+	
+    display: inline-block;
+    
+    margin: 0 0 1.25em 0;
+    
+    border: 1px solid #dddddd;
+    
+    padding: 0.625em 0.75em;
+    
+}
+
+.vcard li {
+	
+    margin: 0;
+    
+    display: block;
+    
+}
+
+.vcard .fn {
+	
+    font-weight: bold;
+    
+    font-size: 0.9375em;
+    
+}
+
+.vevent .summary {
+	
+    font-weight: bold;
+    
+}
+
+.vevent abbr {
+	
+    cursor: default;
+    
+    text-decoration: none;
+    
+    font-weight: bold;
+    
+    border: none;
+    
+    padding: 0 0.0625em;
+    
+}

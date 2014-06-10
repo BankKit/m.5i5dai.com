@@ -1,0 +1,149 @@
+//
+
+	Build Passing.
+	
+	Doctype: HTML5
+	
+	Jade: 1.3.0+
+	
+	#TODO[x]: Public Script ( Miscellaneous Function ), Define
+		
+		Have to be inserted into ' head ' tag
+	
+	#TODO[x]: Librarys
+		
+		HTML5 Shiv ( https://github.com/aFarkas/html5shiv )
+			
+			This script is the defacto way to enable use of HTML5 
+			sectioning elements in legacy Internet Explorer.
+			
+		Modernizr (http://modernizr.com/)
+			A JavaScript library that detects HTML5 and CSS3 features 
+			in the user’s browser.
+			
+		maybe more ...
+	
+	#TODO[x]: Librarys Setup Example
+		
+		- var _default = {
+			
+			html5shiv: {
+				
+				active: true,
+				
+				script: true,
+				
+				condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'],
+				
+				_defer: 'false',
+				
+				url: staticCDNBaseUrl + 'js/html5shiv/3.7.0/html5shiv.min.js'
+				
+			},
+			
+			modernizr: {
+				
+				active: true,
+				
+				script: false,
+				
+				condition: [false, '', ''],
+				
+				_defer: 'true',
+				
+				url: staticCDNBaseUrl + 'js/modernizr/2.7.0/modernizr.min.js'
+				
+			},
+
+			wow: {
+				
+				active: true,
+				
+				script: false,
+				
+				condition: [false, '', ''],
+				
+				_defer: 'true',
+				
+				url: staticBaseUrl + 'js/wow/0.1.6/wow.min.js'
+
+			}
+			
+		}
+
+	Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+
+	Version: 0.1.0-alpha
+
+	Creation Date: ~ ( Tony ).
+
+	Last Update: 2014.05.10 14:14 ( Tony ).
+
+
+
+- var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: 'resource.fenqimall.com/ajax/libs/js/html5shiv/3.7.0/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: '//resource.fenqimall.com/ajax/libs/js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: 'js/wow/0.1.6/wow.min.js'}}
+
+- var opts = {}
+
+
+
+mixin judgement (index, val)
+
+	- var bool = val.condition[0]
+
+	- var sCondition = val.condition[1]
+
+	- var eCondition = val.condition[2]
+
+	- var script = val.script
+
+	- var url = val.url
+
+	if !bool
+
+		if script
+
+			block
+
+			script(src=url)
+
+		else
+
+			script(src=url)
+
+	else
+
+		if script
+
+			+ie (sCondition, eCondition)
+
+				block
+
+				script(src=url)
+
+		else
+
+			+ie (sCondition, eCondition)
+
+				script(src=url)
+
+
+
+// Default Iteration
+- each val, index in _default
+
+	if val.active
+
+		+judgement (index, val)
+
+			case index
+
+				when 'html5shiv'
+
+					script.
+
+						window.html5 = {'shivCSS': false};
+
+
+
+// Custom Iteration, Here

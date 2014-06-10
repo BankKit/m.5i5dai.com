@@ -1,0 +1,110 @@
+//
+
+	Build Passing.
+	
+	Doctype: HTML5
+	
+	Jade: 1.3.0+
+	
+	#TODO[x]: Site Icon
+		
+		eg: http://www.example.com/logo.[png | jpg | gif | svg]
+		
+		'address bar icon', IE5~7, eg: http://www.example.com/image.ico
+		
+	#TODO[x]: Site Icon Setup Example
+		
+		- var opts = {
+			
+			a: {
+				
+				rel: 'logo',
+				
+				type: 'image/svg',
+				
+				href: '../logo.svg'
+				
+			},
+			
+			b: {
+				
+				rel: 'icon',
+				
+				type: 'image/png',
+				
+				href: '../logo-32x32.png'
+				
+			},
+			
+			c: {
+				
+				rel: 'icon',
+				
+				type: 'image/gif',
+				
+				href: '../logo-32x32.gif'
+				
+			},
+			
+			d: {
+				
+				rel: 'icon',
+				
+				type: 'image/jpg',
+				
+				href: '../logo-32x32.jpg'
+				
+			},
+			
+			e: {
+				
+				rel: 'icon',
+				
+				type: 'image/vnd.microsoft.icon',
+				
+				href: '../favicon.ico'
+				
+			},
+			
+			f: {
+				
+				rel: 'shortcut icon',
+				
+				type: 'image/x-icon',
+				
+				href: '../favicon.ico'
+				
+			},
+			
+			g: {
+				
+				rel: 'address bar icon',
+				
+				type: 'image/x-icon',
+				
+				href: '../favicon.ico'
+				
+			}
+			
+		}
+
+	Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+
+	Version: 0.1.0-alpha
+
+	Creation Date: ~ ( Tony ).
+
+	Last Update: 2014.05.10 14:11 ( Tony ).
+- var opts = {a: {rel: 'logo', type: 'image/svg', href: '../../../../logo.svg'}, b: {rel: 'icon', type: 'image/png', href: '../logo-32x32.png'}, c: {rel: 'icon', type: 'image/gif', href: '../logo-32x32.gif'}, d: {rel: 'icon', type: 'image/jpg', href: '../logo-32x32.jpg'}, e: {rel: 'icon', type: 'image/vnd.microsoft.icon', href: '../favicon.ico'}, f: {rel: 'shortcut icon', type: 'image/x-icon', href: '../favicon.ico'}, g: {rel: 'address bar icon', type: 'image/x-icon', href: '../favicon.ico'}}
+
+- each val, index in opts
+
+	if val.rel === 'address bar icon'
+
+		+ie('if lt IE 8]', '<![endif')
+
+			link(rel=val.rel, type=val.type, href=val.href)
+
+	else
+
+		link(rel=val.rel, type=val.type, href=val.href)

@@ -1,0 +1,369 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of button.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.22 17:21 ( Tony ).
+ * 
+ * Last Update: 2014.04.25 14:10 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/* Button · Global */
+
+button,
+
+.button {
+	
+	position: relative;
+	
+	display: inline-block !important;
+	
+	cursor: pointer;
+	
+	color: #FFF !important;
+	
+	font-size: 1rem;
+	
+	text-align: center;
+	
+	text-decoration: none;
+	
+	margin: 0 0 1.25rem;
+	
+	padding: 0.5rem 2rem;
+	
+	border: 0;
+	
+	-webkit-transition: background-color 300ms ease-out;
+	
+	-moz-transition: background-color 300ms ease-out;
+	
+	transition: background-color 300ms ease-out;
+	
+}
+
+button:hover, button:focus,
+
+.button:hover, .button:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Important */
+
+button.default,
+
+.button.default {
+	
+	background-color: rgba(85, 188, 228, 1);
+	
+}
+
+button.default:hover, button.default:focus,
+
+.button.default:hover, .button.default:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Important */
+
+button.important,
+
+.button.important {
+	
+	background-color: rgba(0, 72, 111, 1);
+	
+}
+
+button.important:hover, button.important:focus,
+
+.button.important:hover, .button.important:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Info */
+
+button.info,
+
+.button.info {
+	
+	background-color: rgba(250, 180, 32, 1);
+	
+}
+
+button.important:hover, button.important:focus,
+
+.button.info:hover, .button.info:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Success */
+
+button.success,
+
+.button.success {
+	
+	background-color: rgba(73, 186, 156, 1);
+	
+}
+
+button.success:hover, button.success:focus,
+
+.button.success:hover, .button.success:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Warn */
+
+button.warn,
+
+.button.warn {
+	
+	background-color: rgba(201, 29, 17, 1);
+	
+}
+
+button.warn:hover, button.warn:focus,
+
+.button.warn:hover, .button.warn:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Contrast */
+
+button.contrast,
+
+.button.contrast {
+	
+	background-color: rgba(51, 51, 51, 1);
+	
+}
+
+button.contrast:hover, button.contrast:focus,
+
+.button.contrast:hover, .button.contrast:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Upload */
+
+button.upload,
+
+.button.upload {
+
+	line-height: 30px;
+
+	width: 80px;
+
+	height: 30px;
+
+	margin: 0;
+
+	padding: 0;
+
+	background-color: #009ad7;
+
+}
+
+button.upload:hover, button.upload:focus,
+
+.button.upload:hover, .button.upload:focus {
+	
+	background-color: rgba(0, 0, 0, 1);
+	
+}
+
+
+
+/* Button · Large */
+
+button.large,
+
+.button.large {
+	
+	font-size: 1.25rem;
+	
+	padding: 0.75rem 2.25rem;
+	
+}
+
+
+
+/* Button · Samll */
+
+button.small,
+
+.button.small {
+	
+	font-size: 0.8125rem;
+	
+	padding: 0.35rem 1.35rem;
+	
+}
+
+
+
+/* Button · Tiny */
+
+button.tiny,
+
+.button.tiny {
+	
+	font-size: 0.6875rem;
+	
+	padding: 0.15rem 1rem;
+	
+}
+
+
+
+/* Button · Expand */
+
+button.expand,
+
+.button.expand {
+	
+	padding-right: 0;
+	
+	padding-left: 0;
+	
+	width: 100%;
+	
+}
+
+
+
+/* Button · Radius */
+
+button.radius,
+
+.button.radius {
+	
+	-webkit-border-radius: 0.3rem;
+	
+	-moz-border-radius: 0.3rem;
+	
+	border-radius: 0.3rem;
+	
+}
+
+
+
+/* Button · Round */
+
+button.round,
+
+.button.round {
+	
+	padding: 1.5rem 1.15rem;
+	
+	-webkit-border-radius: 100%;
+	
+	-moz-border-radius: 100%;
+	
+	border-radius: 100%;
+	
+}
+
+button.large.round,
+
+.button.large.round {
+	
+	padding: 1.75rem 1.25rem;
+	
+}
+
+button.small.round,
+
+.button.small.round {
+	
+	padding: 1.3rem 0.95rem;
+	
+}
+
+button.tiny.round,
+
+.button.tiny.round {
+	
+	padding: 0.895rem 0.5rem;
+	
+}
+
+
+
+/* Button · Disable */
+
+button.disabled, button[disabled],
+
+.button.disabled, .button[disabled] {
+	
+	cursor: default;
+	
+	color: rgba(255, 255, 255, 1);
+	
+	opacity: 0.7;
+	
+	-webkit-box-shadow: none;
+	
+	box-shadow: none;
+	
+	background-color: rgba(221, 221, 221, 1);
+	
+}
+
+button.disabled:hover, button[disabled]:hover, .button.disabled:hover, .button[disabled]:hover,
+
+button.disabled:focus, button[disabled]:focus, .button.disabled:focus, .button[disabled]:focus {
+	
+	color: rgba(255, 255, 255, 1);
+	
+	background-color: rgba(170, 170, 170, 1);
+	
+}

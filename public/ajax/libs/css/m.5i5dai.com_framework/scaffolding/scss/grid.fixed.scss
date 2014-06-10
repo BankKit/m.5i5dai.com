@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: Fixed grid styles. 1200px grid system. 12 columns. 30px gutter.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.23 22:11 ( Tony ).
+ * 
+ * Last update: 2014.04.23 22:12 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+.row {
+	
+	width: 1200px;
+	
+	max-width: 100%;
+	
+	min-width: 0;
+	
+	margin: 0 auto;
+	
+	zoom: 1;
+	
+	*zoom: 1;
+	
+}
+
+.row:before, .row:after {
+	
+	display: table;
+	
+	content: "";
+	
+}
+
+.row:after {
+	
+	clear: both;
+	
+}
+
+.row .row {
+	
+	width: auto;
+	
+	max-width: none;
+	
+	min-width: 0;
+	
+	margin-bottom: 0;
+	
+}
+
+
+
+[class*="grid"] {
+	
+	float: left;
+	
+	margin-left: 15px;
+	
+	margin-right: 15px;
+	
+	display: inline;
+	
+	*display: inline;
+	
+}
+
+
+
+.grid_1 {
+	
+	width: 70px;
+	
+}
+
+.grid_2 {
+	
+	width: 170px;
+	
+}
+
+.grid_3 {
+	
+	width: 270px;
+	
+}
+
+.grid_4 {
+	
+	width: 370px;
+	
+}
+
+.grid_5 {
+	
+	width: 470px;
+	
+}
+
+.grid_6 {
+	
+	width: 570px;
+	
+}
+
+.grid_7 {
+	
+	width: 670px;
+	
+}
+
+.grid_8 {
+	
+	width: 770px;
+	
+}
+
+.grid_9 {
+	
+	width: 870px;
+	
+}
+
+.grid_10 {
+	
+	width: 970px;
+	
+}
+
+.grid_11 {
+	
+	width: 1070px;
+	
+}
+
+.grid_12 {
+	
+	width: 1170px;
+	
+}
+
+
+
+.prefix_1 {
+	
+	padding-left: 100px;
+	
+}
+
+.prefix_2 {
+	
+	padding-left: 200px;
+	
+}
+
+.prefix_3 {
+	
+	padding-left: 300px;
+	
+}
+
+.prefix_4 {
+	
+	padding-left: 400px;
+	
+}
+
+.prefix_5 {
+	
+	padding-left: 500px;
+	
+}
+
+.prefix_6 {
+	
+	padding-left: 600px;
+	
+}
+
+.prefix_7 {
+	
+	padding-left: 700px;
+	
+}
+
+.prefix_8 {
+	
+	padding-left: 800px;
+	
+}
+
+.prefix_9 {
+	
+	padding-left: 900px;
+	
+}
+
+.prefix_10 {
+	
+	padding-left: 1000px;
+	
+}
+
+.prefix_11 {
+	
+	padding-left: 1100px;
+	
+}
+
+.suffix_1 {
+	
+	padding-right: 100px;
+	
+}
+.suffix_2 {
+	
+	padding-right: 200px;
+	
+}
+
+.suffix_3 {
+	
+	padding-right: 300px;
+	
+}
+
+.suffix_4 {
+	
+	padding-right: 400px;
+	
+}
+
+.suffix_5 {
+	
+	padding-right: 500px;
+	
+}
+
+.suffix_6 {
+	
+	padding-right: 600px;
+	
+}
+
+.suffix_7 {
+	
+	padding-right: 700px;
+	
+}
+
+.suffix_8 {
+	
+	padding-right: 800px;
+	
+}
+
+.suffix_9 {
+	
+	padding-right: 900px;
+	
+}
+
+.suffix_10 {
+	
+	padding-right: 1000px;
+	
+}
+
+.suffix_11 {
+	
+	padding-right: 1100px;
+	
+}
+
+
+
+.offset_1 {
+	
+	margin-left: 115px;
+	
+}
+
+.offset_2 {
+	
+	margin-left: 215px;
+	
+}
+
+.offset_3 {
+	
+	margin-left: 315px;
+	
+}
+
+.offset_4 {
+	
+	margin-left: 415px;
+	
+}
+
+.offset_5 {
+	
+	margin-left: 515px;
+	
+}
+
+.offset_6 {
+	
+	margin-left: 615px;
+	
+}
+
+.offset_7 {
+	
+	margin-left: 715px;
+	
+}
+
+.offset_8 {
+	
+	margin-left: 815px;
+	
+}
+
+.offset_9 {
+	
+	margin-left: 915px;
+	
+}
+
+.offset_10 {
+	
+	margin-left: 1015px;
+	
+}
+
+.offset_11 {
+	
+	margin-left: 1115px;
+	
+}
