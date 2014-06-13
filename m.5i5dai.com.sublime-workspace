@@ -84,6 +84,22 @@
 	"buffers":
 	[
 		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1099,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 2747,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "package.json",
 			"settings":
 			{
@@ -95,7 +111,7 @@
 			"file": "gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 2165,
+				"buffer_size": 2316,
 				"line_ending": "Windows"
 			}
 		},
@@ -470,11 +486,62 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "README.md",
+					"settings":
+					{
+						"buffer_size": 1099,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1099,
+								1099
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"settings":
+					{
+						"buffer_size": 2747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2747,
+								2747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 2761.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "package.json",
 					"settings":
 					{
@@ -485,8 +552,8 @@
 						"selection":
 						[
 							[
-								770,
-								770
+								743,
+								743
 							]
 						],
 						"settings":
@@ -502,19 +569,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 3,
 					"file": "gruntfile.js",
 					"settings":
 					{
-						"buffer_size": 2165,
+						"buffer_size": 2316,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								732,
-								732
+								1719,
+								1719
 							]
 						],
 						"settings":
@@ -523,13 +590,13 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 666.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 4,
 					"file": "view/jade/master/blank.jade",
 					"settings":
 					{
@@ -556,7 +623,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 5,
 					"file": "view/jade/unit/index.jade",
 					"settings":
 					{
@@ -582,7 +649,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 6,
 					"file": "public/ajax/libs/css/m.5i5dai.com_framework/scaffolding/scss/global.scss",
 					"settings":
 					{
@@ -738,7 +805,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
-	"side_bar_width": 276.0,
+	"side_bar_visible": false,
+	"side_bar_width": 230.0,
 	"status_bar_visible": true
 }
