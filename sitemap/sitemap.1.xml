@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		
+		xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" 
+		
+		xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<!-- You can provide multiple Sitemap files, but each Sitemap file that you provide must have no more than 50,000 URLs and must be no larger than 10MB (10,485,760 bytes). If you would like, you may compress your Sitemap files using gzip to reduce your bandwidth requirement; however the sitemap file once uncompressed must be no larger than 10MB. If you want to list more than 50,000 URLs, you must create multiple Sitemap files. -->
+	
+	<url>
+		
+		<loc>http://www.domain.com/</loc> <!-- This URL must begin with the protocol (such as http) and end with a trailing slash, if your web server requires it. This value must be less than 2,048 characters. eg: http://www.5i5dai.com/ -->
+		
+		<lastmod>2014-04-16T17:51:00+08:00</lastmod> <!-- [W3C Datetime format, eg: YYYY-MM-DD](http://www.w3.org/TR/NOTE-datetime). eg: 2013-12-12 -->
+		
+		<changefreq>always</changefreq>
+		
+		<priority>1.0</priority> <!--  Valid values range from 0.0 to 1.0. eg: 0.8. It only lets the search engines know which pages you deem most important for the crawlers. -->
+		
+	</url>
+	
+</urlset>

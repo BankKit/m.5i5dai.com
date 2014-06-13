@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<tile>
+
+	<visual lang='en-US' version='2'>
+
+		<binding template="TileSquare150x150PeekImageAndText04" branding="name">
+
+			<image id="1" src=""/>
+
+			<text id="1">Serving Today: Tacos</text>
+
+		</binding>
+
+		<binding template="TileWide310x150ImageAndText01" branding="name">
+
+			<image id="1" src=""/>
+
+			<text id="1">Serving Today: Tacos</text>
+
+		</binding>
+
+		<binding template="TileSquare310x310ImageAndText01" branding="name">
+
+			<image id="1" src=""/>
+
+			<text id="1">Serving Today: Tacos</text>
+
+		</binding>
+
+	</visual>
+
+</tile>
