@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of list.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.22 16:01 ( Tony ).
+ * 
+ * Last Update: 2014.04.24 16:02 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+ul, ol, dl {
+	
+    font-size: 1em;
+    
+    line-height: 1.6;
+    
+    margin-bottom: 0;
+    
+    list-style-position: outside;
+	
+	font-family: inherit;
+    
+}
+
+/* Unordered Lists */
+ ul li ul, ul li ol {
+ 
+    margin-left: 0;
+    
+    margin-bottom: 0;
+    
+    font-size: 1em; /* Override nested font-size change */
+    
+}
+
+ul.square, ul.circle, ul.disc {
+	
+    margin-left: 0;
+    
+}
+
+ul.square li ul, ul.circle li ul, ul.disc li ul {
+	
+    list-style: inherit;
+    
+}
+
+ul.square {
+	
+    list-style-type: square;
+    
+}
+
+ul.circle {
+	
+    list-style-type: circle;
+    
+}
+
+ul.disc {
+	
+    list-style-type: disc;
+    
+}
+
+ul.no-bullet {
+	
+    list-style: none;
+    
+}
+
+/* Ordered Lists */
+ol {
+ 
+    margin-left: 0;
+}
+
+ol li ul, ol li ol {
+	
+	margin-left: 0;
+	
+	margin-bottom: 0;
+	
+}
+
+ol li ul, ol li ol {
+	
+    margin-left: 0;
+    
+    margin-bottom: 0;
+    
+}
+
+/* Definition Lists */
+ dl dt {
+ 
+    margin-bottom: 0.3em;
+    
+    font-weight: bold;
+    
+}
+
+dl dd {
+	
+    margin-bottom: 0.75em;
+    
+}

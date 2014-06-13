@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: Global Styles.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.06.13 15:19 ( Tony ).
+ * 
+ * Last Update: 2014.06.13 15:20 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/* 
+ ::::::::  :::        ::::::::  :::::::::      :::     :::
+:+:    :+: :+:       :+:    :+: :+:    :+:   :+: :+:   :+:
++:+        +:+       +:+    +:+ +:+    +:+  +:+   +:+  +:+
+:#:        +#+       +#+    +:+ +#++:++#+  +#++:++#++: +#+
++#+   +#+# +#+       +#+    +#+ +#+    +#+ +#+     +#+ +#+
+#+#    #+# #+#       #+#    #+# #+#    #+# #+#     #+# #+#
+ ########  ########## ########  #########  ###     ### ##########
+*/
+
+html, body {
+	
+	color: #333;
+	
+	font: normal normal normal 14px/normal "新宋体", "宋体", "微软雅黑", "黑体";
+	
+	direction: ltr;
+	
+	unicode-bidi: embed;
+	
+	min-width: 1200px;
+	
+	overflow: hidden;
+	
+	background-color: #FFF;
+	
+}
+
+/*
+We now have a Webapp that runs full screen and is always shown at the correct 
+scale. Most tutorials stop here, but during the development of my own Webapp I 
+ran into a couple more issues. The first is the fact that every time the user 
+touches and holds a link or image a callout sheet will appear giving some 
+options such as save the image, copy the link or opening the link in a new 
+window. This is something we want to prevent, because while we may use links, 
+those are only for internal navigation inside our Webapp and not links in the 
+traditional sense.
+
+Disabling the callout sheet is quite simple and can be achieved by adding the 
+-webkit-touch-callout CSS property and setting it to none. Now you can hold any 
+link or image for as long as you want without getting the default Safari 
+behaviour.
+*/
+
+* {
+	
+	-webkit-touch-callout: none;
+	
+}
+
+/*
+REMOVING THE HIGHLIGHT COLOUR FROM LINKS
+
+One of the little things that bothered me quite a bit was the fact that Safari 
+will add a transparent highlight colour to a link after it has been clicked. 
+For a webpage that might be useful, but when I create a button I want to define 
+the active state myself and I definitely don’t want some transparent colour to 
+cover up my carefully created buttons.
+
+Once again this can be achieved by a little CSS code. The highlight colour can 
+be customized using the -webkit-tap-hightlight-color property, which supports 
+all of the regular colour values. One colour value is particularly interesting 
+to us: rgba, which allow us to specify the transparency of the colour. We don’t 
+want it at all, so we can make it completely transparent.
+*/
+
+* {
+	
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	
+}
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Custom scrollbars in webkit.
+*  ||----||
+  ___/  ___/
+  
+  Search key words => css webkit scrollbar
+  
+  Doc => http://css-tricks.com/custom-scrollbars-in-webkit/
+		 
+		 https://www.webkit.org/blog/363/styling-scrollbars/
+		 
+		 http://almaer.com/blog/creating-custom-scrollbars-with-css-how-css-isnt-great-for-every-task
+		 
+		 http://cssdeck.com/labs/css3-webkit-vertical-scrollbars
+*/
+
+::-webkit-scrollbar {
+	
+	width: 10px;
+	
+	height: 10px;
+	
+	background-color: transparent;
+	
+}
+
+::-webkit-scrollbar-track-piece {
+	
+	background-color: rgba(255, 255, 255, 1);
+	
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	
+	background-color: rgba(153, 153, 153, 1);
+	
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+	
+	background-color: rgba(153, 153, 153, 1);
+	
+}
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Style the placeholder of a form element.
+*  ||----||
+  ___/  ___/
+  
+  Search key words => css webkit placeholder color
+  
+  Doc => http://css-tricks.com/almanac/selectors/p/placeholder/
+         
+         https://developer.mozilla.org/zh-CN/docs/Web/CSS/:-moz-placeholder
+* 
+* 1. WebKit browsers
+* 
+* 2. Mozilla Firefox 4 to 18
+* 
+* 3. Mozilla Firefox 19+
+* 
+* 4. Internet Explorer 10+
+*/
+
+::-webkit-input-placeholder { /* 1 */
+	
+	color: #aaa;
+	
+}
+
+:-moz-placeholder { /* 2 */
+	
+	color: #aaa;
+	
+}
+
+::-moz-placeholder { /* 3 */
+	
+	color: #aaa;
+	
+}
+
+:-ms-input-placeholder { /* 4 */
+	
+	color: #aaa;
+	
+}
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Draw any selected text yellow on red background.
+*  ||----||
+  ___/  ___/
+*/
+
+::-moz-selection {
+	
+	color: #000;
+	
+	background-color: none; /* Safari */
+	
+}
+
+::selection {
+	
+	color: #000;
+	
+	background-color: none; /* Firefox */
+	
+}
+
+/*
+		 (__)
+		 (oo)
+  /-------\/
+ / |     ||----> Draw selected text in a paragraph white on black.
+*  ||----||
+  ___/  ___/
+*/
+
+p::-moz-selection {
+	
+	color: #000;
+	
+	background-color: none; /* Safari */
+	
+}
+
+p::selection {
+	
+	color: #000;
+	
+	background-color: none; /* Firefox */
+	
+}
+
+img,
+object,
+embed {
+	
+	max-width: 100%;
+	
+	height: auto;
+	
+}
+
+object,
+embed {
+	
+	height: 100%;
+	
+}
+
+#map_canvas img,
+#google-maps img,
+#google-maps img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.google-maps img,
+.baidu-maps img,
+.map_canvas embed,
+.map_canvas object {
+	
+	max-width: none !important;
+	
+}
+
+img {
+	
+	display: inline-block;
+	
+	vertical-align: middle;
+	
+}
+
+select {
+	
+	width: 100%;
+	
+	-webkit-appearance: none !important;
+	
+}
+
+select:hover {
+	
+	background-color: #f3f3f3;
+	
+	border-color: #999;
+	
+}
+
+select::-ms-expand {
+	
+	display: none;
+	
+}
+
+@-moz-document url-prefix() {
+	
+	select {
+		
+		background: #fafafa;
+		
+	}
+	
+	select:hover {
+		
+		background: #f3f3f3;
+		
+	}
+	
+}
+
+del {
+	
+	text-decoration: line-through;
+	
+}
+
+abbr[title] {
+	
+	cursor: help;
+	
+}
+
+dfn[title] {
+	
+	border-bottom: 1px dotted;
+	
+	cursor: help;
+	
+}
+
+/*
+ * Use PointerEvents (IE10+) to help preventing the 300ms click delay on mobile devices
+ * 
+ * 1. IE10
+ * 
+ * 2. IE11+
+ */
+
+a, button,
+input[type="button"], input[type="reset"], input[type="submit"],
+input[type="checkbox"], input[type="radio"] {
+	
+	-ms-touch-action: manipulation; /* 1 */
+	
+	touch-action: manipulation; /* 2 */
+	
+}

@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: Header stylesheet.    ...//TODO: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ *     
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2013.04.16 16:14 ( Tony ).
+ * 
+ * Last update: 2014.04.16 16:20 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/*
+:::::::::     :::     :::::::::      :::      ::::::::  :::::::::      :::     :::::::::  :::    :::
+:+:    :+:  :+: :+:   :+:    :+:   :+: :+:   :+:    :+: :+:    :+:   :+: :+:   :+:    :+: :+:    :+:
++:+    +:+ +:+   +:+  +:+    +:+  +:+   +:+  +:+        +:+    +:+  +:+   +:+  +:+    +:+ +:+    +:+
++#++:++#+ +#++:++#++: +#++:++#:  +#++:++#++: :#:        +#++:++#:  +#++:++#++: +#++:++#+  +#++:++#++
++#+       +#+     +#+ +#+    +#+ +#+     +#+ +#+   +#+# +#+    +#+ +#+     +#+ +#+        +#+    +#+
+#+#       #+#     #+# #+#    #+# #+#     #+# #+#    #+# #+#    #+# #+#     #+# #+#        #+#    #+#
+###       ###     ### ###    ### ###     ###  ########  ###    ### ###     ### ###        ###    ###
+*/
+
+
+
+p {
+	
+	color: #555;
+	
+	font-family: inherit;
+	
+	font-weight: normal;
+	
+	font-size: 1rem;
+	
+	line-height: 1.6;
+	
+	word-wrap: break-word;
+	
+	text-rendering: optimizeLegibility;
+	
+	margin-bottom: 1.25rem;
+	
+}
+
+p, p aside {
+	
+	margin: 0;
+	
+	padding: 0;
+	
+}
+
+p.lead {
+	
+	font-size: 1.21875rem;
+	
+	line-height: 1.6;
+	
+}
+
+p aside {
+	
+	font-size: 0.875rem;
+	
+	line-height: 1.35;
+	
+	font-style: italic;
+	
+}

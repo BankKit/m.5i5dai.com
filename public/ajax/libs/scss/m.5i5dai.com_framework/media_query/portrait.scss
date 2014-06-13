@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: Media Query, Portrait Styles.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.03.18 15:50 ( Tony ).
+ * 
+ * Last Update: 2014.03.26 17:51 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+@media only screen and (orientation: portrait) {
+	
+	.show-for-portrait, .hide-for-landscape {
+		
+		display: inherit !important;
+		
+	}
+	
+	.hide-for-portrait, .show-for-landscape {
+		
+		display: none !important;
+		
+	}
+	
+}

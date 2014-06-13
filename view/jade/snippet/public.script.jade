@@ -77,11 +77,9 @@
 
 	Creation Date: ~ ( Tony ).
 
-	Last Update: 2014.05.10 14:14 ( Tony ).
+	Last Update: 2014.06.13 16:16 ( Tony ).
 
-
-
-- var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: 'resource.fenqimall.com/ajax/libs/js/html5shiv/3.7.0/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: '//resource.fenqimall.com/ajax/libs/js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: 'js/wow/0.1.6/wow.min.js'}}
+- var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: staticCDNBaseUrl + 'js/html5shiv/3.7.0/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticCDNBaseUrl + 'js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticBaseUrl + 'js/wow/0.1.6/wow.min.js'}}
 
 - var opts = {}
 
@@ -143,6 +141,60 @@ mixin judgement (index, val)
 					script.
 
 						window.html5 = {'shivCSS': false};
+
+
+
+script.
+
+	var _wow_init = (function () {
+
+		var isIE, isGteIE9;
+
+		isIE = function() {
+			
+			var agent = navigator.userAgent.toLowerCase();
+			
+			return !!agent.match(/msie/i);
+			
+		};
+
+		isGteIE9 = function () {
+
+			var agent = navigator.userAgent.toLowerCase(),
+				
+				match = agent.match(/msie\D*([\.\d]*)/i),
+				
+				version = 0;
+			
+			if (match && match[1]) {
+				
+				version = match[1];
+				
+			}
+			
+			return version >= 9;
+
+		};
+
+		return {
+
+			init: function () {
+
+				if (isIE()) {
+
+					if (isGteIE9()) {new WOW().init();}
+
+				} else {
+
+					new WOW().init();
+
+				}
+
+			}
+
+		};
+
+	} ()).init();
 
 
 

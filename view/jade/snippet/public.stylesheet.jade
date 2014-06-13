@@ -6,79 +6,23 @@
 
 	Creation Date: ~ ( Tony ).
 
-	Last Update: 2014.05.10 14:11 ( Tony ).
+	Last Update: 2014.06.13 16:00 ( Tony ).
 
 
 
 // #TODO[x]: Add Normalize.
 +ie('if lt IE 9]', '[endif')
-	link(rel='stylesheet', href='css/normalize/1.1.3/normalize.min.css')
+	link(rel='stylesheet', href='../../public/ajax/libs/css/normalize/1.1.3/normalize.min.css')
 +ie('if gte IE 9]><!--', '--<![endif')
-	link(rel='stylesheet', href='css/normalize/3.0.0/normalize.min.css')
+	link(rel='stylesheet', href='../../public/ajax/libs/css/normalize/3.0.0/normalize.min.css')
 
 // #TODO[x]: Add CSS Reset
-link(rel='stylesheet', href='css/reset_css/2.0/css.reset.css')
++importCSS(false, 'css/reset_css/2.0/css.reset.css')
 
 
 
-// #TODO[x]: Add Global
-link(rel='stylesheet', href='css/m.5i5dai.com_framework/scaffolding/global.css')
-
-// #TODO[x]: Add Grid · Fixed
-link(rel='stylesheet', href='css/m.5i5dai.com_framework/scaffolding/grid.fixed.css')
-
-// #TODO[x]: Add Grid · Fluid
-link(rel='stylesheet', href='css/m.5i5dai.com_framework/scaffolding/grid.fluid.css')
-
-// #TODO[x]: Add Util
-link(rel='stylesheet', href='css/m.5i5dai.com_framework/scaffolding/util.css')
-
-
-
-// #TODO: Add Base · Header
-
-
-// #TODO: Add Base · Paragraph
-
-
-// #TODO: Add Base · Link
-
-// #TODO: Add Base · Button
-
-
-// #TODO: Add Base · Table
-
-
-// #TODO: Add Base · Form
-
-
-// #TODO: Add Base · Abbreviation
-
-
-// #TODO: Add Base · Blockquote
-
-
-// #TODO: Add Base · Image
-
-
-// #TODO: Add Base · List
-
-
-// #TODO: Add Base · Microformat
-
-
-// #TODO: Add Base · Typography
-
-
+// #TODO[x]: 'm.5i5dai.com' framework.
++importCSS(false, 'css/m.5i5dai.com_framework/m.5i5dai.com_framework.css')
 
 // Animate
-link(rel='stylesheet', href='//resource.fenqimall.com/ajax/libs/css/animate_css/animate.min.css')
-
-
-
-// #TODO[x]: Add Master
-
-
-
-// #TODO[x]: Add Media Query · Print
-link(rel='stylesheet', href='css/m.5i5dai.com_framework/media_query/print.css')
++importCSS(true, 'css/animate_css/animate.min.css')

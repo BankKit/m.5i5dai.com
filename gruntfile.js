@@ -4,6 +4,8 @@ module.exports = function (grunt) {
 	
 	grunt.initConfig({
 
+		pkg: grunt.file.readJSON('package.json'),
+
 		jade: {
 
 			compile: {
@@ -56,7 +58,7 @@ module.exports = function (grunt) {
 
 				files: {
 
-					"view/html/minified/index.html": "view/html/index.html"
+					"view/html/index.min.html": "view/html/index.html"
 
 				}
 
@@ -66,79 +68,29 @@ module.exports = function (grunt) {
 
 		sass: {
 
-			dist: {
+			framework: {
 
 				options: {
+
+					check: false,
 
 					style: 'compressed',
 
 					precision: 5,
 
-					quiet: true,
+					quiet: false,
+
+					lineNumbers: true,
 
 					noCache: false
 
 				},
 
-				files: [
+				files: {
 
-					{
+					'public/ajax/libs/css/m.5i5dai.com_framework/m.5i5dai.com_framework.css': 'public/ajax/libs/scss/m.5i5dai.com_framework/m.5i5dai.com_framework.scss'
 
-						expand: true,
-
-						cwd: 'public/ajax/libs/css/m.5i5dai.com_framework/base/scss',
-
-						src: ['*.scss'],
-
-						dest: 'public/ajax/libs/css/m.5i5dai.com_framework/base/',
-
-						ext: '.css'
-
-					},
-
-					{
-
-						expand: true,
-
-						cwd: 'public/ajax/libs/css/m.5i5dai.com_framework/media_query/scss',
-
-						src: ['*.scss'],
-
-						dest: 'public/ajax/libs/css/m.5i5dai.com_framework/media_query/',
-
-						ext: '.css'
-
-					},
-
-					{
-
-						expand: true,
-
-						cwd: 'public/ajax/libs/css/m.5i5dai.com_framework/component/scss',
-
-						src: ['*.scss'],
-
-						dest: 'public/ajax/libs/css/m.5i5dai.com_framework/component/',
-
-						ext: '.css'
-
-					},
-
-					{
-
-						expand: true,
-
-						cwd: 'public/ajax/libs/css/m.5i5dai.com_framework/scaffolding/scss',
-
-						src: ['*.scss'],
-
-						dest: 'public/ajax/libs/css/m.5i5dai.com_framework/scaffolding/',
-
-						ext: '.css'
-
-					}
-
-				]
+				}
 
 			}
 
@@ -146,19 +98,102 @@ module.exports = function (grunt) {
 		
 		//TODO: CoffeeScript Lint
 		
+		coffeelint: {
+			
+			files: ['public/ajax/libs/coffeescript/**/*.coffee'],
+			
+			options: {
+				
+				'arrow_spacing': {
+					
+					'level': 'error'
+					
+				},
+				
+				'indentation': {
+					
+					'level': 'ignore'
+					
+				},
+				
+				'max_line_length': {
+					
+					'level': 'ignore'
+					
+				},
+				
+				'no_tabs': {
+					
+					'level': 'ignore'
+					
+				}
+				
+			}
+			
+		},
+		
 		//TODO: CoffeeScript
+		coffee: {
+			
+			compileBare: {
+				
+				options: {
+					
+					bare: true
+					
+				},
+				
+				files: {
+					
+					'public/ajax/libs/js/m.5i5dai.com/common.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/common.coffee'
+					
+				}
+				
+			}
+			
+		},
+		
+		uglify: {
+			
+			options: {
+				
+				mangle: false
+				
+			},
+			
+			dist: {
+				
+				files: {
+					
+					'public/ajax/libs/js/m.5i5dai.com/common.min.js': ['public/ajax/libs/js/m.5i5dai.com/common.js']
+					
+				}
+				
+			}
+			
+		},
 		
 		//TODO: Jshint
 		
-		//TODO: CoffeeScript Lint
+		jshint: {
+			
+			all: [
+
+				'gruntfile.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/common.js'
+
+			]
+			
+		},
 		
 		watch: {
 			
-			source: {
+			html: {
 				
-				files: ['view/**/*.jade', 'public/ajax/libs/css/**/*.scss'],
+				files: ['view/**/*.jade'],
 				
-				tasks: ['jade', 'sass', 'htmlmin'],
+				tasks: ['jade', 'htmlmin'],
 				
 				options: {
 					
@@ -166,6 +201,34 @@ module.exports = function (grunt) {
 					
 				}
 				
+			},
+
+			stylesheet: {
+
+				files: ['public/ajax/libs/scss/**/*.scss'],
+
+				tasks: ['sass'],
+				
+				options: {
+					
+					livereload: true // needed to run LiveReload
+					
+				}
+
+			},
+
+			coffeescript: {
+
+				files: ['public/ajax/libs/coffeescript/**/*.coffee'],
+
+				tasks: ['coffeelint', 'coffee', 'uglify', 'jshint'],
+				
+				options: {
+					
+					livereload: true // needed to run LiveReload
+					
+				}
+
 			}
 			
 		}
@@ -177,6 +240,14 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
+
+	grunt.loadNpmTasks('grunt-coffeelint');
+
+	grunt.loadNpmTasks('grunt-contrib-coffee');
+
+	grunt.loadNpmTasks('grunt-contrib-uglify');
+
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	

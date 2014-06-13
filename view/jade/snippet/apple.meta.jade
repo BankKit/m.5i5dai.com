@@ -168,13 +168,11 @@
 
 	Creation Date: ~ ( Tony ).
 
-	Last Update: 2014.05.10 14:11 ( Tony ).
+	Last Update: 2014.06.13 16:14 ( Tony ).
 
 
 
 - var opts = {href: true, basic: true, icon: true, image: false, iconPrefix: 'apple-touch-icon', imagePrefix: 'apple-touch-startup-image'}
-
-- var baseUrl = '../'
 
 - var basic = {'apple-mobile-web-app-capable': 'yes', 'apple-mobile-web-app-status-bar-style': 'black', 'apple-mobile-web-app-title': '亨元后台', 'format-detection': 'telephone=yes'}
 
@@ -212,11 +210,11 @@ mixin set_touch_icon()
 
 			if i === 0
 
-				link(rel = opts.iconPrefix, href = baseUrl + 'apple-touch-icon.png')
+				link(rel = opts.iconPrefix, href = staticBase + 'apple-touch-icon.png')
 
 			else
 
-				link(rel = opts.iconPrefix, sizes = icon[i-1], href = baseUrl + icon_name)
+				link(rel = opts.iconPrefix, sizes = icon[i-1], href = staticBase + icon_name)
 
 
 
@@ -232,7 +230,7 @@ mixin set_startup_image()
 
 		each val, index in image
 
-			link(rel = opts.imagePrefix, href = baseUrl + opts.imagePrefix + '-' + val.size + '.png', media = val.media)
+			link(rel = opts.imagePrefix, href = staticBase + opts.imagePrefix + '-' + val.size + '.png', media = val.media)
 
 
 

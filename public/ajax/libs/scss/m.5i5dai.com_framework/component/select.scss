@@ -1,0 +1,475 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The basic stylesheet file for the jQuery plugin for replacing default select elements.    ...//TODO: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ *     
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: Shen Weizhong ( Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.01.02 15:41 ( Tony ).
+ * 
+ * Last Update: 2014.05.08 10:36 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/*
+ ::::::::  :::::::::: :::        :::::::::: :::::::: ::::::::::: ::::::::  :::::::::
+:+:    :+: :+:        :+:        :+:       :+:    :+:    :+:    :+:    :+: :+:    :+:
++:+        +:+        +:+        +:+       +:+           +:+    +:+    +:+ +:+    +:+
++#++:++#++ +#++:++#   +#+        +#++:++#  +#+           +#+    +#+    +:+ +#++:++#:
+       +#+ +#+        +#+        +#+       +#+           +#+    +#+    +#+ +#+    +#+
+#+#    #+# #+#        #+#        #+#       #+#    #+#    #+#    #+#    #+# #+#    #+#
+ ########  ########## ########## ########## ########     ###     ########  ###    ###
+*/
+
+.slt {
+
+	display: none;
+	
+	-webkit-appearance: none;
+
+}
+
+.selecter-element {}
+
+.selecter {
+	
+	position: relative;
+	
+	display: block;
+	
+	margin: 0;
+	
+	z-index: 1;
+	
+}
+
+.selecter .selecter-selected {
+	
+	display: block;
+	
+	position: relative;
+	
+	z-index: 49;
+	
+	cursor: pointer;
+	
+	color: #333;
+	
+	font-size: 12px;
+	
+	line-height: 26px;
+	
+	overflow: hidden;
+	
+	text-overflow: clip;
+	
+	height: 26px;
+	
+	margin: 0;
+	
+	padding-right: 10px;
+	
+	padding-left: 10px;
+	
+	border: 1px solid #ccc;
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	-webkit-background-clip: border-box;
+	
+	background-clip: border-box; /* useful if you don't want a bg color from leaking outside the border: */
+	
+	/* background: #FFF url(../../../img/investment-site/Icons/dropdown.icon.001.png) no-repeat right center; */
+	background: #FFF;
+	
+}
+
+.selecter .selecter-options {
+	
+	display: none;
+	
+	z-index: 50;
+	
+	position: absolute;
+	
+	top: 100%;
+	
+	left: 0;
+	
+	padding: 0;
+	
+	margin: 0;
+	
+	margin-top: -27px;
+	
+	overflow: auto;
+	
+	overflow-x: hidden;
+	
+	border: 1px solid #ccc;
+	
+	border-width: 0 1px 1px;
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	-webkit-background-clip: border-box;
+	
+	background-clip: border-box; /* useful if you don't want a bg color from leaking outside the border: */
+	
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+	
+	background-color: #fefefe;
+	
+}
+
+.selecter .selecter-group {
+	
+	background: #F9F9F9;
+	
+	border-bottom: 1px solid #e3e3e3;
+	
+	color: #999;
+	
+	display: block;
+	
+	font-size: 11px;
+	
+	padding: 5px 10px 4px;
+	
+	text-transform: uppercase;
+	
+}
+
+.selecter .selecter-item {
+	
+	display: block;
+	
+	cursor: pointer;
+	
+	color: #333;
+	
+	font-size: 13px;
+	
+	line-height: 26px;
+	
+	height: 26px;
+	
+	overflow: hidden;
+	
+	text-overflow: ellipsis;
+	
+	margin: 0;
+	
+	padding-right: 10px;
+	
+	padding-left: 10px;
+	
+	border-bottom: 1px solid #e3e3e3;
+	
+	background: #fff;
+	
+}
+
+.selecter .selecter-item.selected {
+	
+	background: #F9F9F9;
+	
+}
+
+.selecter .selecter-item:hover,
+.selecter .selecter-item.selected:hover {
+
+	color: #FFF;
+
+	background-color: #009ad7;
+
+}
+
+.selecter .selecter-item.disabled {
+	
+	color: #999;
+	
+	cursor: default;
+	
+}
+
+.selecter .selecter-item:first-child {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+.selecter .selecter-item:last-child {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	border-bottom: 0;
+	
+}
+
+/* Open */
+
+.selecter.open {
+	
+	z-index: 3;
+	
+}
+
+.selecter.open .selecter-selected {
+	
+	-webkit-border-radius: 0 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0 0;
+	
+	border-radius: 0 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	z-index: 51;
+	
+}
+
+.selecter.open .selecter-selected,
+
+.selecter.focus .selecter-selected {
+	
+	background-color: #fff;
+	
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	
+}
+
+/* 'Cover' Positioning */
+
+.selecter.cover .selecter-options {
+	
+	top: 0;
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	border-width: 1px;
+	
+}
+
+.selecter.cover .selecter-options .selecter-item.first {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+.selecter.cover.open .selecter-selected {
+	
+	z-index: 49;
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+/* 'Bottom' Positioning */
+
+.selecter.bottom .selecter-options {
+	
+	top: auto;
+	
+	bottom: 100%;
+	
+	border-width: 1px 1px 0;
+	
+}
+
+.selecter.bottom .selecter-item:last-child {
+	
+	border: none;
+	
+}
+
+.selecter.bottom.open .selecter-selected {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+.selecter.bottom.open .selecter-options {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+/* 'Bottom' + 'Cover' Positioning */
+
+.selecter.bottom.cover .selecter-options {
+	
+	top: auto;
+	
+	bottom: 0;
+	
+}
+
+.selecter.bottom.cover.open .selecter-selected {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+.selecter.bottom.cover.open .selecter-options {
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+}
+
+/* Multiple Select */
+
+.selecter.multiple .selecter-options {
+	
+	position: static;
+	
+	display: block;
+	
+	width: 100%;
+	
+	border-width: 1px;
+	
+	-webkit-border-radius: 0; /* Android ≤ 1.6, iOS 1-3.2, Safari 3-4 */
+	
+	-moz-border-radius: 0;
+	
+	border-radius: 0; /* Android 2.1+, Chrome, Firefox 4+, IE 9+, iOS 4+, Opera 10.50+, Safari 5+ */
+	
+	box-shadow: none;
+	
+}
+
+/* 'Disabled' State */
+
+.selecter.disabled .selecter-selected {
+	
+	cursor: default;
+	
+	color: #ccc;
+	
+	border-color: #eee;
+	
+	background: #fff;
+	
+}
+
+.selecter.disabled .selecter-options {
+	
+	border-color: #eee;
+	
+	background: #fff;
+	
+}
+
+.selecter.disabled .selecter-group,
+
+.selecter.disabled .selecter-item {
+	
+	cursor: default;
+	
+	color: #ccc;
+	
+	border-color: #eee;
+	
+}
+
+.selecter.disabled .selecter-item.selected {
+	
+	background: #fafafa;
+	
+}
+
+/* Scroller Support */
+
+.selecter .selecter-options.scroller {
+	
+	overflow: hidden;
+	
+}
+
+.selecter .selecter-options.scroller .scroller-content {
+	
+	/*max-height: 260px;*/
+	
+	padding: 0;
+	
+}
+
+
+
+/* Begin · Custom */
+
+	.selecter {
+
+		top: 6px;
+
+	}
+
+	.selecter .selecter-selected,
+
+	.selecter .selecter-item {
+
+		width: 186px;
+
+	}
+
+/* End · Custom */

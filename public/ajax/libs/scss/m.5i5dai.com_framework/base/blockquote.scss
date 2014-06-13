@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of blockquote.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.22 16:00 ( Tony ).
+ * 
+ * Last Update: 2014.04.24 16:01 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+blockquote {
+	
+    margin: 0 0 1.25em;
+    
+    padding: 0.5625em 1.25em 0 1.1875em;
+    
+    border-left: 1px solid #DDD;
+    
+}
+
+blockquote cite {
+	
+    display: block;
+	
+    color: #555;
+	
+    font-size: 0.8125em;
+    
+}
+
+blockquote cite:before {
+	
+    content: "\2014 \0020";
+    
+}
+
+blockquote cite a, blockquote cite a:visited {
+	
+    color: #555;
+    
+}
+
+blockquote, blockquote p {
+	
+    line-height: normal;
+    
+    color: #6f6f6f;
+    
+}

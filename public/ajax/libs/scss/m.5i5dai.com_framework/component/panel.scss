@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of standard panels.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.04.25 10:59 ( Tony ).
+ * 
+ * Last Update: 2014.04.25 14:13 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/*
+:::::::::     :::     ::::    ::: :::::::::: :::
+:+:    :+:  :+: :+:   :+:+:   :+: :+:        :+:
++:+    +:+ +:+   +:+  :+:+:+  +:+ +:+        +:+
++#++:++#+ +#++:++#++: +#+ +:+ +#+ +#++:++#   +#+
++#+       +#+     +#+ +#+  +#+#+# +#+        +#+
+#+#       #+#     #+# #+#   #+#+# #+#        #+#
+###       ###     ### ###    #### ########## ##########
+*/
+
+.panel {
+	
+	border: 1px solid rgba(216, 216, 216, 1);
+	
+	margin-bottom: 1.25rem;
+	
+	padding: 1.25rem;
+	
+	background: rgba(242, 242, 242, 1);
+	
+}
+
+.panel >:first-child {
+	
+	margin-top: 0;
+	
+}
+
+.panel >:last-child {
+	
+	margin-bottom: 0;
+	
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6,
+.panel p {
+	
+	color: rgba(51, 51, 51, 1);
+	
+}
+
+.panel h1,
+.panel h2,
+.panel h3,
+.panel h4,
+.panel h5,
+.panel h6 {
+	
+	line-height: 1;
+	
+	margin-bottom: 0.625rem;
+	
+}
+
+.panel h1.subheader,
+.panel h2.subheader,
+.panel h3.subheader,
+.panel h4.subheader,
+.panel h5.subheader,
+.panel h6.subheader {
+	
+	line-height: 1.4;
+	
+}
+
+.panel.callout {
+	
+	border: 1px solid rgba(182, 237, 255, 1);
+	
+	margin-bottom: 1.25rem;
+	
+	padding: 1.25rem;
+	
+	background: rgba(236, 250, 255, 1);
+	
+}
+
+.panel.callout >:first-child {
+	
+	margin-top: 0;
+	
+}
+
+.panel.callout >:last-child {
+	
+	margin-bottom: 0;
+	
+}
+
+.panel.callout h1,
+.panel.callout h2,
+.panel.callout h3,
+.panel.callout h4,
+.panel.callout h5,
+.panel.callout h6,
+.panel.callout p {
+	
+	color: rgba(51, 51, 51, 1);
+	
+}
+
+.panel.callout h1,
+
+.panel.callout h2,
+
+.panel.callout h3,
+
+.panel.callout h4,
+
+.panel.callout h5,
+
+.panel.callout h6 {
+	
+	line-height: 1;
+	
+	margin-bottom: 0.625rem;
+	
+}
+
+.panel.callout h1.subheader,
+
+.panel.callout h2.subheader,
+
+.panel.callout h3.subheader,
+
+.panel.callout h4.subheader,
+
+.panel.callout h5.subheader,
+
+.panel.callout h6.subheader {
+	
+	line-height: 1.4;
+	
+}
+
+.panel.callout a:not(.button) {
+	
+	color: rgba(0, 140, 186, 1);
+	
+}
+
+.panel.radius {
+	
+	-webkit-border-radius: 0.3rem;
+	
+	-moz-border-radius: 0.3rem;
+	
+	border-radius: 0.3rem;
+	
+}

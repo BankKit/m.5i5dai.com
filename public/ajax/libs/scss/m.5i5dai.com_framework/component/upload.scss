@@ -1,0 +1,133 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of file upload component.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.05.05 14:45 ( Tony ).
+ * 
+ * Last Update: 2014.05.07 18:38 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+/* Common Upload · Container */
+
+.custom-upload {
+
+	width: 400px;
+
+	height: 30px;
+
+	-moz-box-sizing: border-box;
+	
+	-webkit-box-sizing: border-box;
+	
+	box-sizing: border-box;
+
+}
+
+.custom-upload > div {
+
+	position: relative;
+
+	float: left;
+
+	width: 320px;
+
+	border: 1px solid rgba(221, 221, 221, 1);
+
+	border-right-width: 0;
+
+	-moz-box-sizing: border-box;
+	
+	-webkit-box-sizing: border-box;
+	
+	box-sizing: border-box;
+
+}
+
+.custom-upload input {
+    
+    width: 319px !important;
+
+    height: 28px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+
+	-moz-box-sizing: border-box;
+	
+	-webkit-box-sizing: border-box;
+	
+	box-sizing: border-box;
+
+}
+
+.custom-upload input[type=file] {
+
+    position: relative;
+
+    z-index: 2;
+
+    outline: none;
+
+    text-align: right;
+
+    opacity: 0;
+
+    -moz-opacity: 0;
+
+    -khtml-opacity: 0;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+    filter: alpha(opacity=0);
+    
+}
+
+.custom-upload .fake-file {
+
+    position: absolute;
+
+    z-index: 1;
+
+    top: 0;
+
+    left: 0;
+
+    line-height: 100%;
+    
+    width: 320px;
+
+    height: 30px;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+}
+
+.custom-upload .fake-file input {
+
+    font-size: 14px;
+
+}

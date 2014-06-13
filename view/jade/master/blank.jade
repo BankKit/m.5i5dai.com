@@ -1,16 +1,18 @@
+-var staticBase = '../../'
+
+-var staticBaseUrl = staticBase + 'public/ajax/libs/'
+
+-var staticCDNBaseUrl = '//resource.fenqimall.com/ajax/libs/'
+
+-var loaderUrl = '//resource.fenqimall.com/ajax/libs/js/requirejs/2.1.11/require.min.js'
+
 mixin ie (sCondition, eCondition)
 
 	|<!--[!{sCondition}>
-	
+
 	block
-	
+
 	|<!!{eCondition}]-->
-
-
-
-
-
--var loaderUrl = '//resource.fenqimall.com/ajax/libs/js/requirejs/2.1.11/require.min.js'
 
 mixin jsloader (cdn, boot)
 
@@ -22,6 +24,26 @@ mixin jsloader (cdn, boot)
 
 		script(data-main= staticCDNBaseUrl + boot, src= loaderUrl)
 
+mixin importCSS (cdn, specificUrl)
+
+	if !cdn
+
+		link(rel= 'stylesheet', href= staticBaseUrl + specificUrl)
+
+	else
+
+		link(rel= 'stylesheet', href= staticCDNBaseUrl + specificUrl)
+
+mixin importJS (cdn, specificUrl)
+
+	if !cdn
+
+		script(src= staticBaseUrl + specificUrl)
+
+	else
+
+		script(src= staticCDNBaseUrl + specificUrl)
+
 
 
 
@@ -30,7 +52,7 @@ doctype html
 
 <!--[if IE 7]><html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="zh"><![endif]-->
 
-<!--[if IEMobile 7]><html class="no-js iem7" lang="zh" itemscope itemtype="http://schema.org/WebPage" manifest="../manifest.appcache"><![endif]-->
+<!--[if IEMobile 7]><html class="no-js iem7" lang="zh" itemscope itemtype="http://schema.org/WebPage" manifest="../../manifest.appcache"><![endif]-->
 
 <!--[if IE 8]><html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="zh"><![endif]-->
 
@@ -102,7 +124,13 @@ html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebP
 		
 		meta(name='copyright', content='')
 		
-		link(rel='author', type='text/plain', href='humans.txt')
+		// Site Icon
+		include ../snippet/site.icon.meta.jade
+		
+		// Apple Meta Tag
+		include ../snippet/apple.meta.jade
+		
+		link(rel='author', type='text/plain', href='../../humans.txt')
 		
 		// Public stylesheet snippet.
 		include ../snippet/public.stylesheet.jade
@@ -112,58 +140,6 @@ html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebP
 		
 		// Public script snippet.
 		include ../snippet/public.script.jade
-		
-		script.
-
-			var _wow_init = (function () {
-
-				var isIE, isGteIE9;
-
-				isIE = function() {
-					
-					var agent = navigator.userAgent.toLowerCase();
-					
-					return !!agent.match(/msie/i);
-					
-				};
-
-				isGteIE9 = function () {
-
-					var agent = navigator.userAgent.toLowerCase(),
-						
-						match = agent.match(/msie\D*([\.\d]*)/i),
-						
-						version = 0;
-					
-					if (match && match[1]) {
-						
-						version = match[1];
-						
-					}
-					
-					return version >= 9;
-
-				};
-
-				return {
-
-					init: function () {
-
-						if (isIE()) {
-
-							if (isGteIE9()) {new WOW().init();}
-
-						} else {
-
-							new WOW().init();
-
-						}
-
-					}
-
-				};
-
-			} ()).init();
 		
 		// Private javascript snippet which need to be put in the '<head/>' tag.
 		block private-head-javascript
@@ -187,6 +163,6 @@ html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebP
 //
 //* Version: 0.1.0-alpha
 //
-//* Creation Date: 2014.05.12 14:11 ( Tony ).
+//* Creation Date: 2014.06.13 14:11 ( Tony ).
 //
-//* Last Update: 2014.05.12 14:14 ( Tony ).
+//* Last Update: 2014.06.13 16:18 ( Tony ).
