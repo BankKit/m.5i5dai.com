@@ -110,6 +110,8 @@ Disallow: /inc/
 Disallow: /data/
 Disallow: /*?*
 Disallow: /*.css$
+Disallow: /*.scss$
 Disallow: /*.js$
+Disallow: /*.coffee$
 Disallow: /*.gz$
 Sitemap: http://www.fenqimall.com/sitemap.index.xml
