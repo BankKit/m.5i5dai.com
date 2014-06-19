@@ -37,7 +37,7 @@
 	
 	Creation Date: 2014.06.13 11:26 ( Tony ).
 	
-	Last Update: 2014.06.13 14:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
+	Last Update: 2014.06.19 11:28 ( Tony ).    ...//TODO: Update the 'Last Update'.
 	
 	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
 	
@@ -46,7 +46,7 @@
 	Copyright: ...//TODO: Give a copyright.
 ###
 
-do (global, document, requirejs, console = (if typeof console isnt 'undefined' then console else undefined)) ->
+do (global = window, document, requirejs, console = (if typeof console isnt 'undefined' then console else undefined)) ->
 
 	"use strict"
 
@@ -56,7 +56,7 @@ do (global, document, requirejs, console = (if typeof console isnt 'undefined' t
 
 		# Begin | Options
 			
-		baseUrl = '../public/ajax/libs/js'
+		baseUrl = '../../public/ajax/libs/js'
 
 		cdnjsUrl = '//resource.fenqimall.com/ajax/libs/js/'
 
@@ -110,13 +110,15 @@ do (global, document, requirejs, console = (if typeof console isnt 'undefined' t
 
 					srl: cdnjsUrl + 'jquery_scroll/0.1.0/jquery.scroll.min'
 
+					infiniteScroll: 'jquery_infinite_scroll/2.0.2/jquery.infinite.scroll'
+
 					jquery_xdomainrequest: 'jquery_xdomainrequest/1.0.2/jquery.xdomainrequest'
 
 					easing: cdnjsUrl + 'jquery_easing/1.3/jquery.easing'
 
 					cookie: cdnjsUrl + 'jquery_cookie/1.3.1/jquery.cookie.min'
 
-					component: 'fenqimall.com/component'
+					component: 'm.5i5dai.com/component'
 
 					scheck: 'jquery_check/0.1.0/jquery.check.min'
 

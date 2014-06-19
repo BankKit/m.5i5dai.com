@@ -1,6 +1,18 @@
 @charset "utf-8";
 
+@import "variables";
+
 // 'm.5i5dai.com' unit
+@import "scaffolding/global",
+		"scaffolding/grid.fluid",
+		"scaffolding/util",
+		"base/header",
+		"component/select",
+		"scaffolding/master",
+		"media_query/retina",
+		"media_query/print";
+/*
+
 @import
 	"base/header",
 	"base/link",
@@ -24,4 +36,5 @@
 	"scaffolding/grid.fluid",
 	"scaffolding/layout.fluid",
 	"scaffolding/util",
-	"scaffolding/master"
+	"scaffolding/master";
+ */

@@ -38,7 +38,7 @@
 	
 	Creation Date: 2014.06.13 11:26 ( Tony ).
 	
-	Last Update: 2014.06.13 14:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
+	Last Update: 2014.06.19 11:28 ( Tony ).    ...//TODO: Update the 'Last Update'.
 	
 	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
 	
@@ -52,7 +52,7 @@
   fn = function() {
     var baseUrl, boot, cdnjsUrl, jq1x, jq2x;
     boot = boot || {};
-    baseUrl = '../public/ajax/libs/js';
+    baseUrl = '../../public/ajax/libs/js';
     cdnjsUrl = '//resource.fenqimall.com/ajax/libs/js/';
     jq1x = cdnjsUrl + 'jquery/1.11.1/jquery.min';
     jq2x = cdnjsUrl + 'jquery/2.1.1/jquery.min';
@@ -84,10 +84,11 @@
           jquery: jquery,
           jqMigrate: cdnjsUrl + 'jquery_migrate/1.2.1/jquery.migrate',
           srl: cdnjsUrl + 'jquery_scroll/0.1.0/jquery.scroll.min',
+          infiniteScroll: 'jquery_infinite_scroll/2.0.2/jquery.infinite.scroll',
           jquery_xdomainrequest: 'jquery_xdomainrequest/1.0.2/jquery.xdomainrequest',
           easing: cdnjsUrl + 'jquery_easing/1.3/jquery.easing',
           cookie: cdnjsUrl + 'jquery_cookie/1.3.1/jquery.cookie.min',
-          component: 'fenqimall.com/component',
+          component: 'm.5i5dai.com/component',
           scheck: 'jquery_check/0.1.0/jquery.check.min',
           slt: 'jquery_select/0.1.0/jquery.selector.min',
           jquery_validation: 'jquery_validation/1.12.0/jquery.validate',
@@ -136,4 +137,4 @@
     };
   })(_AMD || {}, fn);
   _AMD.init();
-})(global, document, requirejs, (typeof console !== 'undefined' ? console : void 0));
+})(window, document, requirejs, (typeof console !== 'undefined' ? console : void 0));

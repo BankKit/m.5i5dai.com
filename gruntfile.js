@@ -74,9 +74,9 @@ module.exports = function (grunt) {
 					
 					check: false,
 					
-					style: 'compressed',
+					style: 'nested',		// Can be nested, compact, compressed, expanded.
 					
-					precision: 5,
+					precision: 6,
 					
 					quiet: false,
 					
@@ -88,7 +88,9 @@ module.exports = function (grunt) {
 				
 				files: {
 					
-					'public/ajax/libs/css/m.5i5dai.com_framework/m.5i5dai.com_framework.css': 'public/ajax/libs/scss/m.5i5dai.com_framework/m.5i5dai.com_framework.scss'
+					'public/ajax/libs/css/m.5i5dai.com_framework/m.5i5dai.com_framework.css': 'public/ajax/libs/scss/m.5i5dai.com_framework/m.5i5dai.com_framework.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/index.css': 'public/ajax/libs/scss/m.5i5dai.com/index.scss'
 					
 				}
 				
@@ -145,7 +147,15 @@ module.exports = function (grunt) {
 				
 				files: {
 					
-					'public/ajax/libs/js/m.5i5dai.com/common.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/common.coffee'
+					'public/ajax/libs/js/m.5i5dai.com/common.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/common.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/component/srl.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/component/srl.coffee',
+
+					// Index
+					
+					'public/ajax/libs/js/m.5i5dai.com/index.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/index.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/index.logic.coffee'
 					
 				}
 				
@@ -165,7 +175,15 @@ module.exports = function (grunt) {
 				
 				files: {
 					
-					'public/ajax/libs/js/m.5i5dai.com/common.min.js': ['public/ajax/libs/js/m.5i5dai.com/common.js']
+					'public/ajax/libs/js/m.5i5dai.com/common.min.js': 'public/ajax/libs/js/m.5i5dai.com/common.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/component/srl.min.js': 'public/ajax/libs/js/m.5i5dai.com/component/srl.js',
+
+					// Index
+
+					'public/ajax/libs/js/m.5i5dai.com/index.min.js': 'public/ajax/libs/js/m.5i5dai.com/index.js',
+
+					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js'
 					
 				}
 				
@@ -181,7 +199,15 @@ module.exports = function (grunt) {
 				
 				'gruntfile.js',
 				
-				'public/ajax/libs/js/m.5i5dai.com/common.js'
+				'public/ajax/libs/js/m.5i5dai.com/common.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/component/srl.js',
+
+				// Index
+
+				'public/ajax/libs/js/m.5i5dai.com/index.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js'
 				
 			]
 			

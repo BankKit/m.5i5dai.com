@@ -2,13 +2,96 @@ extends ../master/master
 
 block title
 
-	title 我爱我贷网 · 微站点 · 首页 · 亨元金融
+	title(itemprop='name') 我爱我贷网 · 微站点 · 首页 · 亨元金融
+
+block private-stylesheet
+
+	+importCSS(false, 'css/m.5i5dai.com/index.css')
 
 block private-head-javascript
 
 block content
 
+	// Promo
+	div.row.promo.wow.fadeInDown
+
+	// Header
+	div.row.wow.fadeInDown
+
+		h3.small-24.columns 投资项目
+
+	// Select
+	form.row.wow.fadeInDown.selectArea.frmFilter(id='frmFilter', name='frmFilter', method='POST', action='#')
+
+		div.small-12.columns.border_box
+
+			div.fullWidth.round-box-3px(style='overflow: hidden;')
+
+				select(id='sltInvestAmmount', class='border_box round-box-3px slt sltInvestAmmount', name='sltInvestAmmount')
+
+					option(value='') 投资金额
+
+					option(value='') 菜单一
+
+					option(value='') 菜单二
+
+					option(value='') 菜单三
+
+					option(value='') 菜单四
+
+					option(value='') 菜单五
+
+		div.small-12.columns.border_box
+
+			div.fullWidth.round-box-3px(style='overflow: hidden;')
+
+				select(id='sltInvestHorizon', class='border_box round-box-3px slt sltInvestHorizon', name='sltInvestHorizon')
+
+					option(value='') 投资期限
+
+					option(value='') 菜单一
+
+					option(value='') 菜单二
+
+					option(value='') 菜单三
+
+					option(value='') 菜单四
+
+					option(value='') 菜单五
+
+	// List
+	div.row.wow.fadeInDown.listTable
+
+		- for (var i = 0; i <=7; i++)
+
+			// Item
+			div.small-24.columns.border_box.listRow
+
+				div.fullWidth.border_box.clearfix.listRowEffectArea
+
+					div.fullWidth.clearfix.listContent.topContent
+
+						div.small-18.columns.border_box.proName 汇通-安心贷2000001111
+
+						div.small-6.columns.border_box.btnCheck 
+
+							a.block.fullWidth.text-center.round-box-3px(href='#', hreflang='zh') 查看详情
+
+					div.fullWidth.clearfix.listContent.bottomContent
+
+						div.left.border_box.text-left 金额:￥9,999.00
+
+						div.left.border_box.text-center 期限:12个月
+
+						div.left.border_box.text-right 年化收益率:9.84%
+
+		div(id='infiniteNext', class='hide')
+
+			a(class='text-indent', href='http://114.215.194.232:8180/provinceServlet?type=省') 下一页
+
 block private-body-script
+
+	+jsloader(false, 'js/m.5i5dai.com/index.min')
 
 
 // ___________  ______    _____  ___   ___  ___
@@ -23,4 +106,4 @@ block private-body-script
 //
 //* Creation Date: 2014.06.13 16:31 ( Tony ).
 //
-//* Last Update: 2014.06.13 16:32 ( Tony ).
+//* Last Update: 2014.06.19 11:21 ( Tony ).

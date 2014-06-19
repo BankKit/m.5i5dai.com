@@ -1,5 +1,4 @@
-
-/*
+###
 				   ___    ___                                                 __
 				  /'___\ /'___\                                    __        /\ \__
 	  ___    ___ /\ \__//\ \__/   __     __    ____    ___   _ __ /\_\  _____\ \ ,_\
@@ -37,9 +36,14 @@
  	License: ...//TODO: Give a license.
  	
  	Copyright: ...//TODO: Give a copyright.
- */
-define(function() {
-  require(['common.min'], function(common) {
-    require(['m.5i5dai.com/app/index.logic.min']);
-  });
-});
+ ###
+
+define ->
+
+	require ['common.min'], (common) ->
+
+		require ['m.5i5dai.com/app/index.logic.min']
+		
+		return
+	
+	return

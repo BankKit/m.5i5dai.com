@@ -59,7 +59,7 @@ doctype html
 <!--[if IE 9]><html class="ie ie9 ie-lt10 no-js" lang="zh" itemscope itemtype="http://schema.org/WebPage"><![endif]-->
 
 <!--[if (gte IE 9)|(gt IEMobile 7)|!(IEMobile)]><!-->
-html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebPage')
+html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/Organization')
 	<!--<![endif]-->
 	
 	head
@@ -148,8 +148,22 @@ html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebP
 		block private-head-javascript
 		
 	body
+
+		div.relative.row.wow.fadeInDown.pageHeader(itemscope itemtype='http://schema.org/WPHeader')
+
+			a(id='logo', class='absolute block text-indent touch-action logo', href='//store.apple.com/cn/', hreflang='zh', title='我爱我贷网 · 微站点 · 首页 · 亨元金融') 我爱我贷网 · 微站点 · 首页 · 亨元金融
+
+			a(id='siteNav', class='absolute block text-indent touch-action unselectable siteNav', href='#', hreflang='zh', title='我爱我贷网 · 微站点 · 导航 · 亨元金融') 我爱我贷网 · 微站点 · 导航 · 亨元金融
 		
 		block content
+
+		div.relative.row.wow.fadeInDown.pageFooter(itemscope itemtype='http://schema.org/WPFooter')
+
+			div.absolute
+
+				span(itemprop='provider') 亨元金融
+
+				| 旗下理财平台
 					
 		block private-body-script
 		
@@ -168,4 +182,4 @@ html(class='ie-gt9 no-js', lang='zh', itemscope itemtype='http://schema.org/WebP
 //
 //* Creation Date: 2014.06.13 16:22 ( Tony ).
 //
-//* Last Update: 2014.06.13 16:26 ( Tony ).
+//* Last Update: 2014.06.18 00:05 ( Tony ).
