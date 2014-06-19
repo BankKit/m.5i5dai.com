@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/**
+ * Statement: ...//TODO: Write statement.
+ * 
+ * Describe: The stylesheet of master page.    ...//TODO[x]: Check description.
+ * 
+ * Further Changes, Comments: ...//TODO: Give a further changes and comments link.
+ * 
+ * Docs: ...//TODO: Give a link about project documents.
+ * 
+ * Original Author: 沈维忠 ( Shen Weizhong / Tony Stark ).
+ * 
+ * Thanks: ...//TODO: If there are some contributors, just mark them.
+ * 
+ * Version: 0.1.0-alpha
+ * 
+ * Creation Date: 2014.06.19 18:23 ( Tony ).
+ * 
+ * Last Update: 2014.06.19 20:08 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ * 
+ * Music ( Custom ):     ...//TODO: If you are listenning some music, just write the name of songs.
+ * 
+ * License: ...//TODO: Give a license.
+ * 
+ * Copyright: ...//TODO: Give a copyright.
+ */
+
+
+
+/*
+:::    ::: ::::::::::     :::     :::::::::  :::::::::: :::::::::  
+:+:    :+: :+:          :+: :+:   :+:    :+: :+:        :+:    :+: 
++:+    +:+ +:+         +:+   +:+  +:+    +:+ +:+        +:+    +:+ 
++#++:++#++ +#++:++#   +#++:++#++: +#+    +:+ +#++:++#   +#++:++#:  
++#+    +#+ +#+        +#+     +#+ +#+    +#+ +#+        +#+    +#+ 
+#+#    #+# #+#        #+#     #+# #+#    #+# #+#        #+#    #+# 
+###    ### ########## ###     ### #########  ########## ###    ### 
+*/
+
+.pageHeader {
+
+	border-bottom: 1px solid rgba(241, 241, 241, 1);
+
+}
+
+
+
+/*
+ :::::::: ::::::::::: ::: ::::::::::: :::    :::  ::::::::
+:+:    :+:    :+:   :+: :+:   :+:     :+:    :+: :+:    :+:
++:+           +:+  +:+   +:+  +:+     +:+    +:+ +:+
++#++:++#++    +#+ +#++:++#++: +#+     +#+    +:+ +#++:++#++
+       +#+    +#+ +#+     +#+ +#+     +#+    +#+        +#+
+#+#    #+#    #+# #+#     #+# #+#     #+#    #+# #+#    #+#
+ ########     ### ###     ### ###      ########   ########
+*/
+
+.mainStatus {
+
+	height: 4.7em;
+
+}
+
+.mainStatus > h2 {
+
+	line-height: 30px;
+
+	height: 30px;
+
+	width: 75px;
+
+	padding-left: 45px;
+
+	left: 50%;
+
+	-webkit-transform: translateX(-50%);
+
+	-ms-transform: translateX(-50%);
+
+	transform: translateX(-50%);
+
+	background-position: left center;
+
+	background-repeat: no-repeat;
+
+}
+
+.mainStatus > h2.regSuccess {
+
+	background-image: url(../../img/m.5i5dai.com_framework/icon/success.png);
+
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (min-device-pixel-ratio: 1.5) {
+	
+	.mainStatus > h2.regSuccess {
+
+		background-image: url(../../img/m.5i5dai.com_framework/icon/success@2x.png);
+
+		-webkit-background-size: 38px 29px;
+
+		background-size: 38px 29px;
+
+	}
+	
+}
+
+
+
+/*
+::::::::::: ::::    ::: ::::::::::: :::::::::   ::::::::  :::::::::  :::    :::  :::::::: ::::::::::: ::::::::::: ::::::::  ::::    :::
+    :+:     :+:+:   :+:     :+:     :+:    :+: :+:    :+: :+:    :+: :+:    :+: :+:    :+:    :+:         :+:    :+:    :+: :+:+:   :+:
+    +:+     :+:+:+  +:+     +:+     +:+    +:+ +:+    +:+ +:+    +:+ +:+    +:+ +:+           +:+         +:+    +:+    +:+ :+:+:+  +:+
+    +#+     +#+ +:+ +#+     +#+     +#++:++#:  +#+    +:+ +#+    +:+ +#+    +:+ +#+           +#+         +#+    +#+    +:+ +#+ +:+ +#+
+    +#+     +#+  +#+#+#     +#+     +#+    +#+ +#+    +#+ +#+    +#+ +#+    +#+ +#+           +#+         +#+    +#+    +#+ +#+  +#+#+#
+    #+#     #+#   #+#+#     #+#     #+#    #+# #+#    #+# #+#    #+# #+#    #+# #+#    #+#    #+#         #+#    #+#    #+# #+#   #+#+#
+########### ###    ####     ###     ###    ###  ########  #########   ########   ########     ###     ########### ########  ###    ####
+*/
+
+.intro {
+
+	padding: 1.5em 0;
+
+	background: rgba(251, 87, 92, 0.1);
+
+}
+
+.intro > span {
+
+	font-weight: bold;
+
+	left: 50%;
+
+	-webkit-transform: translateX(-50%);
+
+	-ms-transform: translateX(-50%);
+
+	transform: translateX(-50%);
+
+}
+
+.intro > ul {
+
+	color: rgba(0, 0, 0, 0.5);
+
+	padding: 0 1.5em;
+
+	list-style-position: inside;
+
+	list-style-type: disc;
+
+	margin-top: 2em;
+
+}
+
+.intro > ul > li {
+
+	margin-bottom: 0.5em;
+
+}
+
+.intro > ul > li:last-child {
+
+	margin-bottom: 0 !important;
+
+}
+
+
+
+/*
+ ::::::::   ::::::::  ::::    ::: ::::::::::: :::      :::::::: :::::::::::
+:+:    :+: :+:    :+: :+:+:   :+:     :+:   :+: :+:   :+:    :+:    :+:
++:+        +:+    +:+ :+:+:+  +:+     +:+  +:+   +:+  +:+           +:+
++#+        +#+    +:+ +#+ +:+ +#+     +#+ +#++:++#++: +#+           +#+
++#+        +#+    +#+ +#+  +#+#+#     +#+ +#+     +#+ +#+           +#+
+#+#    #+# #+#    #+# #+#   #+#+#     #+# #+#     #+# #+#    #+#    #+#
+ ########   ########  ###    ####     ### ###     ###  ########     ###
+*/
+
+.contact {
+
+	margin-top: 1em !important;
+
+}
+
+.contact p {
+
+	color: rgba(0, 0, 0, 0.5);
+
+	margin-top: 0.5em;
+
+}
+
+.contact .tltHeader {
+
+	color: rgba(0, 0, 0, 0.7);
+
+	font-weight: bold;
+
+}
+
+.contact a {
+
+	color: rgba(231, 46, 33, 1);
+
+}
+
+
+
+/*
+:::::::::  :::    ::: ::::::::::: ::::::::::: ::::::::  ::::    :::
+:+:    :+: :+:    :+:     :+:         :+:    :+:    :+: :+:+:   :+:
++:+    +:+ +:+    +:+     +:+         +:+    +:+    +:+ :+:+:+  +:+
++#++:++#+  +#+    +:+     +#+         +#+    +#+    +:+ +#+ +:+ +#+
++#+    +#+ +#+    +#+     +#+         +#+    +#+    +#+ +#+  +#+#+#
+#+#    #+# #+#    #+#     #+#         #+#    #+#    #+# #+#   #+#+#
+#########   ########      ###         ###     ########  ###    ####
+*/
+
+.button {
+
+	margin-top: 1.5em;
+
+	color: rgba(255, 255, 255, 1);
+
+	font-weight: 900;
+
+	font-size: 1.5em;
+
+	line-height: 35px;
+
+	height: 35px;
+
+	background: rgb(251,86,92);
+
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZiNTY1YyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmNDNkNDQiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+
+	background: -moz-linear-gradient(top,  rgba(251,86,92,1) 0%, rgba(244,61,68,1) 100%);
+
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(251,86,92,1)), color-stop(100%,rgba(244,61,68,1)));
+
+	background: -webkit-linear-gradient(top,  rgba(251,86,92,1) 0%,rgba(244,61,68,1) 100%);
+
+	background: -o-linear-gradient(top,  rgba(251,86,92,1) 0%,rgba(244,61,68,1) 100%);
+
+	background: -ms-linear-gradient(top,  rgba(251,86,92,1) 0%,rgba(244,61,68,1) 100%);
+
+	background: linear-gradient(to bottom,  rgba(251,86,92,1) 0%,rgba(244,61,68,1) 100%);
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb565c', endColorstr='#f43d44',GradientType=0 );
+
+}

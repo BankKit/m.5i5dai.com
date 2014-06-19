@@ -31,9 +31,9 @@
  	
  	Version: 0.1.0-alpha
  	
- 	Creation Date: 2014.06.18 23:19 ( Tony ).
+ 	Creation Date: 2014.06.19 16:18 ( Tony ).
  	
- 	Last Update: 2014.06.19 16:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.19 16:20 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -49,8 +49,6 @@ define (require) ->
 	jqMigrate = require('jqMigrate')
 
 	modernizr = require('modernizr')
-
-	infiniteScroll = require('infiniteScroll')
 
 	scroller = require('component/srl.min')
 
@@ -78,56 +76,6 @@ define (require) ->
 
 				# HTML Scroll
 				scroller.excute $(':root')
-
-				# Infinite Scroll Options
-				infiniteOpts =
-
-					loading:
-
-						finishedMsg: '亲~ 已经没有更多内容啦~'
-
-						msgText: '正在努力加载中...'
-
-					state:
-
-						isDuringAjax: false
-
-						isInvalidPage: false
-
-						isDestroyed: false
-
-						isDone: false
-
-						isPaused: false
-
-						currPage: 1
-
-					debug: false
-
-					binder: $(window)
-
-					navSelector: '#infiniteNext'
-
-					nextSelector: '#infiniteNext a'
-
-					animate: true
-
-					extraScrollPx: 150
-
-					bufferPx: 5
-
-					infid: 0
-
-					dataType: 'json'
-
-					appendCallback: false
-
-				# Infinite Scroll Trigger
-				$('.listTable').infinitescroll infiniteOpts, (json, opts) ->
-
-					console.log 'Requsted!'
-
-					return
 
 				return
 

@@ -1,0 +1,84 @@
+extends ../master/master
+
+block title
+
+	title(itemprop='name') 我爱我贷网 · 微站点 · 注册 · 注册结果 · 成功 · 亨元金融
+
+block private-stylesheet
+
+	+importCSS(false, 'css/m.5i5dai.com/registration.result.css')
+
+block private-head-javascript
+
+block content
+
+	// Main Status
+	div.relative.row.text-center.wow.fadeInDown.mainStatus
+
+		// successfull registration / failure registration ( '.regSuccess' / '.regFailure' )
+		h2.absolute.regSuccess 注册成功
+
+	// Introduction
+	div.row.wow.fadeInDown
+
+		div.small-24.columns.border_box
+
+			div.relative.fullWidth.minHeight-50.intro
+
+				span.absolute.text-center 汇通 · 安心贷
+
+				ul.border_box
+
+					li 超高收益：9.84%年化收益率
+
+					li 超低风险：大型保险公司全额承保
+
+					li 100%本息保障 期限灵活：持有90天后可转让
+
+					li 超低门槛：1千
+
+	// Contact
+	div.row.wow.fadeInDown.contact
+
+		div.small-24.columns.border_box
+
+			p.tltHeader 全国客服热线
+
+			p
+				a(href='tel:400-808-5599') 400-808-5599
+
+				| (工作日 9:00 - 18:00)
+
+			p.tltHeader 官方网址
+
+			p 立即登录
+
+				a(href='#', hreflang='zh') www.5i5dai.com
+
+				| 开始投资之旅
+
+	// Submit Button
+	div.row.wow.fadeInDown.btnSubmit
+
+		div.small-24.columns.border_box
+
+			a.block.text-center.button 立即登录
+
+block private-body-script
+
+	+jsloader(false, 'js/m.5i5dai.com/registration.result.min')
+
+
+// ___________  ______    _____  ___   ___  ___
+//("     _   ")/    " \  (\"   \|"  \ |"  \/"  |
+// )__/  \\__/// ____  \ |.\\   \    | \   \  /
+//	\\_ /  /  /    ) :)|: \.   \\  |  \\  \/
+//	|.  | (: (____/ // |.  \    \. |  /   /
+//	\:  |  \        /  |    \    \ | /   /
+//	 \__|   \"_____/    \___|\____\)|___/ 沈维忠 ( Shen Weizhong / Tony Stark ).
+//
+//* Version: 0.1.0-alpha
+//
+//* Creation Date: 2014.06.19 18:17 ( Tony ).
+//
+//* Last Update: 2014.06.19 20:09 ( Tony ).

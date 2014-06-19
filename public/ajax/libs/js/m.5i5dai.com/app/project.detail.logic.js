@@ -1,4 +1,5 @@
-###
+
+/*
 				   ___    ___                                                 __
 				  /'___\ /'___\                                    __        /\ \__
 	  ___    ___ /\ \__//\ \__/   __     __    ____    ___   _ __ /\_\  _____\ \ ,_\
@@ -31,110 +32,38 @@
  	
  	Version: 0.1.0-alpha
  	
- 	Creation Date: 2014.06.18 23:19 ( Tony ).
+ 	Creation Date: 2014.06.19 16:18 ( Tony ).
  	
- 	Last Update: 2014.06.19 16:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.19 16:20 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
  	License: ...//TODO: Give a license.
  	
  	Copyright: ...//TODO: Give a copyright.
- ###
-
-define (require) ->
-
-	SJ = require('jquery')
-
-	jqMigrate = require('jqMigrate')
-
-	modernizr = require('modernizr')
-
-	infiniteScroll = require('infiniteScroll')
-
-	scroller = require('component/srl.min')
-
-	_fns = ($) ->
-
-		fnObj =
-
-			config: {}
-
-			init: (settings) ->
-
-				this.mixture()
-
-				return
-
-			mixture: ->
-
-				$('a[href=#]').on 'click', (e) ->
-
-					e.stopPropagation()
-
-					e.preventDefault()
-
-					return
-
-				# HTML Scroll
-				scroller.excute $(':root')
-
-				# Infinite Scroll Options
-				infiniteOpts =
-
-					loading:
-
-						finishedMsg: '亲~ 已经没有更多内容啦~'
-
-						msgText: '正在努力加载中...'
-
-					state:
-
-						isDuringAjax: false
-
-						isInvalidPage: false
-
-						isDestroyed: false
-
-						isDone: false
-
-						isPaused: false
-
-						currPage: 1
-
-					debug: false
-
-					binder: $(window)
-
-					navSelector: '#infiniteNext'
-
-					nextSelector: '#infiniteNext a'
-
-					animate: true
-
-					extraScrollPx: 150
-
-					bufferPx: 5
-
-					infid: 0
-
-					dataType: 'json'
-
-					appendCallback: false
-
-				# Infinite Scroll Trigger
-				$('.listTable').infinitescroll infiniteOpts, (json, opts) ->
-
-					console.log 'Requsted!'
-
-					return
-
-				return
-
-		fnObj.init()
-
-		return
-
-	SJ _fns
-
-	return
+ */
+define(function(require) {
+  var SJ, jqMigrate, modernizr, scroller, _fns;
+  SJ = require('jquery');
+  jqMigrate = require('jqMigrate');
+  modernizr = require('modernizr');
+  scroller = require('component/srl.min');
+  _fns = function($) {
+    var fnObj;
+    fnObj = {
+      config: {},
+      init: function(settings) {
+        this.mixture();
+      },
+      mixture: function() {
+        $('a[href=#]').on('click', function(e) {
+          e.stopPropagation();
+          e.preventDefault();
+        });
+        scroller.excute($(':root'));
+      }
+    };
+    fnObj.init();
+  };
+  SJ(_fns);
+});

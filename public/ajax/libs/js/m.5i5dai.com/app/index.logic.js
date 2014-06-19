@@ -34,7 +34,7 @@
  	
  	Creation Date: 2014.06.18 23:19 ( Tony ).
  	
- 	Last Update: 2014.06.18 23:55 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.19 16:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -76,7 +76,7 @@ define(function(require) {
             isPaused: false,
             currPage: 1
           },
-          debug: true,
+          debug: false,
           binder: $(window),
           navSelector: '#infiniteNext',
           nextSelector: '#infiniteNext a',

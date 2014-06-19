@@ -24,7 +24,13 @@ module.exports = function (grunt) {
 				
 				files: {
 					
-					"view/html/index.html": "view/jade/unit/index.jade"
+					"view/html/index.html": "view/jade/unit/index.jade",
+					
+					"view/html/project.detail.html": "view/jade/unit/project.detail.jade",
+
+					"view/html/registration.protocol.html": "view/jade/unit/registration.protocol.jade",
+
+					"view/html/registration.result.html": "view/jade/unit/registration.result.jade"
 					
 				}
 				
@@ -58,7 +64,13 @@ module.exports = function (grunt) {
 				
 				files: {
 					
-					"view/html/index.min.html": "view/html/index.html"
+					"view/html/index.min.html": "view/html/index.html",
+
+					"view/html/project.detail.min.html": "view/html/project.detail.html",
+
+					"view/html/registration.protocol.min.html": "view/html/registration.protocol.html",
+
+					"view/html/registration.result.min.html": "view/html/registration.result.html"
 					
 				}
 				
@@ -90,7 +102,13 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/css/m.5i5dai.com_framework/m.5i5dai.com_framework.css': 'public/ajax/libs/scss/m.5i5dai.com_framework/m.5i5dai.com_framework.scss',
 
-					'public/ajax/libs/css/m.5i5dai.com/index.css': 'public/ajax/libs/scss/m.5i5dai.com/index.scss'
+					'public/ajax/libs/css/m.5i5dai.com/index.css': 'public/ajax/libs/scss/m.5i5dai.com/index.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/project.detail.css': 'public/ajax/libs/scss/m.5i5dai.com/project.detail.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/registration.protocol.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.protocol.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/registration.result.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.result.scss'
 					
 				}
 				
@@ -155,7 +173,25 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/js/m.5i5dai.com/index.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/index.coffee',
 					
-					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/index.logic.coffee'
+					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/index.logic.coffee',
+
+					// Project Detail
+					
+					'public/ajax/libs/js/m.5i5dai.com/project.detail.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/project.detail.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/project.detail.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/project.detail.logic.coffee',
+
+					// Registration Protocol
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.protocol.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/registration.protocol.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.protocol.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/registration.protocol.logic.coffee',
+
+					// Registration Result
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.result.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/registration.result.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/registration.result.logic.coffee'
 					
 				}
 				
@@ -183,7 +219,25 @@ module.exports = function (grunt) {
 
 					'public/ajax/libs/js/m.5i5dai.com/index.min.js': 'public/ajax/libs/js/m.5i5dai.com/index.js',
 
-					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js'
+					'public/ajax/libs/js/m.5i5dai.com/app/index.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js',
+
+					// Project Detail
+					
+					'public/ajax/libs/js/m.5i5dai.com/project.detail.min.js': 'public/ajax/libs/js/m.5i5dai.com/project.detail.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/project.detail.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/project.detail.logic.js',
+
+					// Registration Protocol
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.protocol.min.js': 'public/ajax/libs/js/m.5i5dai.com/registration.protocol.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.protocol.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/registration.protocol.logic.js',
+
+					// Registration Result
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.result.min.js': 'public/ajax/libs/js/m.5i5dai.com/registration.result.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js'
 					
 				}
 				
@@ -207,7 +261,25 @@ module.exports = function (grunt) {
 
 				'public/ajax/libs/js/m.5i5dai.com/index.js',
 
-				'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js'
+				'public/ajax/libs/js/m.5i5dai.com/app/index.logic.js',
+
+				// Project Detail
+				
+				'public/ajax/libs/coffeescript/m.5i5dai.com/project.detail.js',
+
+				'public/ajax/libs/coffeescript/m.5i5dai.com/app/project.detail.logic.js',
+
+				// Registration Protocol
+				
+				'public/ajax/libs/js/m.5i5dai.com/registration.protocol.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/app/registration.protocol.logic.js',
+
+				// Registration Result
+				
+				'public/ajax/libs/js/m.5i5dai.com/registration.result.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js'
 				
 			]
 			
