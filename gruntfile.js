@@ -30,7 +30,9 @@ module.exports = function (grunt) {
 
 					"view/html/registration.protocol.html": "view/jade/unit/registration.protocol.jade",
 
-					"view/html/registration.result.html": "view/jade/unit/registration.result.jade"
+					"view/html/registration.result.html": "view/jade/unit/registration.result.jade",
+
+					"view/html/phone.validation.html": "view/jade/unit/phone.validation.jade"
 					
 				}
 				
@@ -70,7 +72,9 @@ module.exports = function (grunt) {
 
 					"view/html/registration.protocol.min.html": "view/html/registration.protocol.html",
 
-					"view/html/registration.result.min.html": "view/html/registration.result.html"
+					"view/html/registration.result.min.html": "view/html/registration.result.html",
+
+					"view/html/phone.validation.min.html": "view/html/phone.validation.html"
 					
 				}
 				
@@ -108,7 +112,9 @@ module.exports = function (grunt) {
 
 					'public/ajax/libs/css/m.5i5dai.com/registration.protocol.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.protocol.scss',
 
-					'public/ajax/libs/css/m.5i5dai.com/registration.result.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.result.scss'
+					'public/ajax/libs/css/m.5i5dai.com/registration.result.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.result.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/phone.validation.css': 'public/ajax/libs/scss/m.5i5dai.com/phone.validation.scss'
 					
 				}
 				
@@ -191,7 +197,13 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/js/m.5i5dai.com/registration.result.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/registration.result.coffee',
 					
-					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/registration.result.logic.coffee'
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/registration.result.logic.coffee',
+
+					// Phone Validation
+					
+					'public/ajax/libs/js/m.5i5dai.com/phone.validation.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/phone.validation.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/phone.validation.logic.coffee'
 					
 				}
 				
@@ -237,7 +249,13 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/js/m.5i5dai.com/registration.result.min.js': 'public/ajax/libs/js/m.5i5dai.com/registration.result.js',
 					
-					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js'
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js',
+
+					// Phone Validation
+					
+					'public/ajax/libs/js/m.5i5dai.com/phone.validation.min.js': 'public/ajax/libs/js/m.5i5dai.com/phone.validation.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js'
 					
 				}
 				
@@ -279,7 +297,13 @@ module.exports = function (grunt) {
 				
 				'public/ajax/libs/js/m.5i5dai.com/registration.result.js',
 
-				'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js'
+				'public/ajax/libs/js/m.5i5dai.com/app/registration.result.logic.js',
+
+				// Phone Validation
+				
+				'public/ajax/libs/js/m.5i5dai.com/phone.validation.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js'
 				
 			]
 			

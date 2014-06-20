@@ -1,0 +1,73 @@
+extends ../master/master
+
+block title
+
+	title(itemprop='name') 我爱我贷网 · 微站点 · 首页 · 亨元金融
+
+block private-stylesheet
+
+	+importCSS(false, 'css/m.5i5dai.com/phone.validation.css')
+
+block private-head-javascript
+
+block content
+
+	// Registration · Phone Validation
+	div.row.wow.fadeInDown
+
+		div.small-24.columns.border_box
+
+			h3 验证手机号码
+
+	// Registration · Validation Code Sent Tip
+	div.row.wow.fadeInDown.clearfix.valiCodeSentTip
+
+		div.small-24.columns.border_box
+
+			i.block 动态码短信已发送至
+
+				span 13788937596
+
+	// Registration · Validation Code
+	form.row.wow.fadeInDown.clearfix(id='frmValiCode', class='frmValiCode', name='frmValiCode', method='POST', action='#')
+
+		div.small-24.columns.border_box
+
+			div.fullWidth.tltHeader 动态码
+
+			div.fullWidth.clearfix
+
+				div.small-18.columns.border_box.field.iptField.hasBorder
+
+					input(id='iptValiCode', class='fullWidth iptValiCode', name='iptValiCode', type='text')
+
+				div.small-6.columns.border_box.field.no-padding-right
+
+					a(id='', class='block clean-link round-box-3px btn btnResent', href='//store.apple.com/cn/', disabled='true')
+
+						span 60
+
+						| 秒后重发
+
+				div.small-24.columns.border_box.field.errorField._iptValiCode
+
+			button.block.fullWidth.text-center.round-box-3px.button(type='submit') 	确认
+
+block private-body-script
+
+	+jsloader(false, 'js/m.5i5dai.com/phone.validation.min')
+
+
+// ___________  ______    _____  ___   ___  ___
+//("     _   ")/    " \  (\"   \|"  \ |"  \/"  |
+// )__/  \\__/// ____  \ |.\\   \    | \   \  /
+//	\\_ /  /  /    ) :)|: \.   \\  |  \\  \/
+//	|.  | (: (____/ // |.  \    \. |  /   /
+//	\:  |  \        /  |    \    \ | /   /
+//	 \__|   \"_____/    \___|\____\)|___/ 沈维忠 ( Shen Weizhong / Tony Stark ).
+//
+//* Version: 0.1.0-alpha
+//
+//* Creation Date: 2014.06.20 18:15 ( Tony ).
+//
+//* Last Update: 2014.06.20 22:08 ( Tony ).
