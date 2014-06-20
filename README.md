@@ -30,3 +30,11 @@
 如果你在功能上或者其他方面有些自己的想法，请查阅我们在[Trello](https://trello.com/c/2ZFhBKcM '点击查看')上的面板是否已经存在相关的想法或建议。如果你的想法非常棒，面板上却没有，我们会将你的提议加入我们的功能储备，并尽可能去实现它！
 
 ####现存页面清单（预览）####
+
+- [投资项目](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/index.min.html '点击查看')
+
+- [投资项目详情](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/project.detail.min.html '点击查看')
+
+- [注册结果](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.result.min.html '点击查看')
+
+- [注册协议](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.protocol.min.html '点击查看')
