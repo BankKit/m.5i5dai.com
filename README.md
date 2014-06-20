@@ -38,3 +38,5 @@
 - [注册结果](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.result.min.html '点击查看')
 
 - [注册协议](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.protocol.min.html '点击查看')
+
+- [手机号码验证](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/phone.validation.min.html '点击查看')
