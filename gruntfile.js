@@ -21,20 +21,24 @@ module.exports = function (grunt) {
 					}
 					
 				},
-				
-				files: {
-					
-					"view/html/index.html": "view/jade/unit/index.jade",
-					
-					"view/html/project.detail.html": "view/jade/unit/project.detail.jade",
 
-					"view/html/registration.protocol.html": "view/jade/unit/registration.protocol.jade",
+				files: [
 
-					"view/html/registration.result.html": "view/jade/unit/registration.result.jade",
+					{
+						expand: true,
 
-					"view/html/phone.validation.html": "view/jade/unit/phone.validation.jade"
-					
-				}
+						cwd: 'view/jade/unit/',
+
+						src: ['*.jade'],
+
+						dest: 'view/html/',
+
+						ext: '.html',
+
+						extDot: 'last'
+					}
+
+				]
 				
 			}
 			
@@ -63,20 +67,24 @@ module.exports = function (grunt) {
 					minifyCSS: true
 					
 				},
-				
-				files: {
-					
-					"view/html/index.min.html": "view/html/index.html",
 
-					"view/html/project.detail.min.html": "view/html/project.detail.html",
+				files: [
 
-					"view/html/registration.protocol.min.html": "view/html/registration.protocol.html",
+					{
+						expand: true,
 
-					"view/html/registration.result.min.html": "view/html/registration.result.html",
+						cwd: 'view/html/',
 
-					"view/html/phone.validation.min.html": "view/html/phone.validation.html"
-					
-				}
+						src: ['*.html'],
+
+						dest: 'view/html/minified/',
+
+						ext: '.min.html',
+
+						extDot: 'last'
+					}
+
+				]
 				
 			}
 			
