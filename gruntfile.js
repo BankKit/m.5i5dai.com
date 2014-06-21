@@ -75,9 +75,9 @@ module.exports = function (grunt) {
 
 						cwd: 'view/html/',
 
-						src: ['*.html'],
+						src: ['*.html', '!*.min.html'],
 
-						dest: 'view/html/minified/',
+						dest: 'view/html/',
 
 						ext: '.min.html',
 
