@@ -34,7 +34,7 @@
  	
  	Creation Date: 2014.06.20 18:23 ( Tony ).
  	
- 	Last Update: 2014.06.20 22:06 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.22 03:58 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -56,10 +56,26 @@ define(function(require) {
       init: function(settings) {
         this.mixture();
       },
-      mixture: function() {
-        $('a[href=#]').on('click', function(e) {
+      helpers: {
+        pdControl: function(e) {
           e.stopPropagation();
           e.preventDefault();
+        },
+        clickOrTouch: function() {
+          var evtName;
+          if (modernizr.touch) {
+            evtName = 'touchstart';
+          } else {
+            evtName = 'click';
+          }
+          return evtName;
+        }
+      },
+      mixture: function() {
+        var helpers;
+        helpers = this.helpers;
+        $('a[href=#]').on(helpers.clickOrTouch(), function(e) {
+          helpers.pdControl(e);
         });
         scroller.excute($(':root'));
         this.countdown();
@@ -69,23 +85,23 @@ define(function(require) {
         config: {
           addLocalization: function() {
             $.extend($.validator.messages, {
-              required: "必须填写",
-              remote: "请修正此栏位",
-              email: "请输入有效的电子邮件",
-              url: "请输入有效的网址",
-              date: "请输入有效的日期",
-              dateISO: "请输入有效的日期 (YYYY-MM-DD)",
-              number: "请输入正确的数字",
-              digits: "只可输入数字",
-              creditcard: "请输入有效的信用卡号码",
-              equalTo: "你的输入不相同",
-              extension: "请输入有效的后缀",
-              maxlength: $.validator.format("最多 {0} 个字"),
-              minlength: $.validator.format("最少 {0} 个字"),
-              rangelength: $.validator.format("请输入长度为 {0} 至 {1} 之間的字串"),
-              range: $.validator.format("请输入 {0} 至 {1} 之间的数值"),
-              max: $.validator.format("请输入不大于 {0} 的数值"),
-              min: $.validator.format("请输入不小于 {0} 的数值")
+              required: '必须填写',
+              remote: '请修正此栏位',
+              email: '请输入有效的电子邮件',
+              url: '请输入有效的网址',
+              date: '请输入有效的日期',
+              dateISO: '请输入有效的日期 (YYYY-MM-DD)',
+              number: '请输入正确的数字',
+              digits: '只可输入数字',
+              creditcard: '请输入有效的信用卡号码',
+              equalTo: '你的输入不相同',
+              extension: '请输入有效的后缀',
+              maxlength: $.validator.format('最多 {0} 个字'),
+              minlength: $.validator.format('最少 {0} 个字'),
+              rangelength: $.validator.format('请输入长度为 {0} 至 {1} 之間的字串'),
+              range: $.validator.format('请输入 {0} 至 {1} 之间的数值'),
+              max: $.validator.format('请输入不大于 {0} 的数值'),
+              min: $.validator.format('请输入不小于 {0} 的数值')
             });
           },
           addCustomValidation: function() {
@@ -136,8 +152,8 @@ define(function(require) {
             },
             submitHandler: function(form, event) {
               event.preventDefault();
-              if (SJ('html').hasClass('ie8')) {
-                SJ(form).valid();
+              if ($('html').hasClass('ie8')) {
+                $(form).valid();
                 if (validationCase.numberOfInvalids() === 0) {
                   form.submit();
                 } else {
@@ -152,35 +168,40 @@ define(function(require) {
         }
       },
       countdown: function() {
-        var clickPermission, countdownNum, excute, resent;
-        resent = SJ('.btnResent');
-        countdownNum = resent.children('span');
-        clickPermission = false;
-        if (!clickPermission) {
-          resent.on('click', function(e) {
-            e.stopPropagation();
-            e.preventDefault();
-          });
-        } else {
-          resent.on('click', function(e) {
-            clickPermission = false;
-          });
-        }
-        excute = function(o) {
-          var countDown, i, intervalID_1;
-          i = +countdownNum.text();
-          countDown = function() {
-            if (i === 0) {
-              console.log('Sucker!');
-              clickPermission = true;
-            } else {
-              i--;
-              countdownNum.text(i);
-            }
-          };
-          intervalID_1 = window.setInterval(countDown, 1000);
+        var countDown, countdownNum, countdownPos, helpers, intervalID_1, resent, resentPermission;
+        helpers = this.helpers;
+        resent = $('.btnResent');
+        countdownNum = function() {
+          return resent.children('span');
         };
-        excute();
+        countdownPos = $('<span/>');
+        resentPermission = false;
+        resent.on(helpers.clickOrTouch(), function(e) {
+          var intervalID_1;
+          if (!resentPermission) {
+            helpers.pdControl(e);
+          } else {
+            helpers.pdControl(e);
+            resentPermission = false;
+            resent.empty().append(countdownPos);
+            countdownNum().after('秒后重发');
+            countdownNum().text(60);
+            intervalID_1 = window.setInterval(countDown, 1000);
+          }
+        });
+        countDown = function() {
+          var i;
+          i = +countdownNum().text();
+          if (i === 0) {
+            resent.text('重新发送');
+            resentPermission = true;
+            window.clearInterval(intervalID_1);
+          } else {
+            i--;
+            countdownNum().text(i);
+          }
+        };
+        intervalID_1 = window.setInterval(countDown, 1000);
       }
     };
     fnObj.init();
