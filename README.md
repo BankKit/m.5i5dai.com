@@ -35,6 +35,8 @@
 
 - [投资项目详情](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/project.detail.min.html '点击查看')
 
+- [注册](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.min.html '点击查看')
+
 - [注册结果](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.result.min.html '点击查看')
 
 - [注册协议](http://resource.fenqimall.com/site_preview/m.5i5dai.com/view/html/registration.protocol.min.html '点击查看')

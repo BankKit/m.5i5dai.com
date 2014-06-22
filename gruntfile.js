@@ -122,7 +122,9 @@ module.exports = function (grunt) {
 
 					'public/ajax/libs/css/m.5i5dai.com/registration.result.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.result.scss',
 
-					'public/ajax/libs/css/m.5i5dai.com/phone.validation.css': 'public/ajax/libs/scss/m.5i5dai.com/phone.validation.scss'
+					'public/ajax/libs/css/m.5i5dai.com/phone.validation.css': 'public/ajax/libs/scss/m.5i5dai.com/phone.validation.scss',
+
+					'public/ajax/libs/css/m.5i5dai.com/registration.css': 'public/ajax/libs/scss/m.5i5dai.com/registration.scss'
 					
 				}
 				
@@ -211,7 +213,13 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/js/m.5i5dai.com/phone.validation.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/phone.validation.coffee',
 					
-					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/phone.validation.logic.coffee'
+					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/phone.validation.logic.coffee',
+
+					// Registration
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/registration.coffee',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.logic.js': 'public/ajax/libs/coffeescript/m.5i5dai.com/app/registration.logic.coffee'
 					
 				}
 				
@@ -263,7 +271,13 @@ module.exports = function (grunt) {
 					
 					'public/ajax/libs/js/m.5i5dai.com/phone.validation.min.js': 'public/ajax/libs/js/m.5i5dai.com/phone.validation.js',
 					
-					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js'
+					'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js',
+
+					// Registration
+					
+					'public/ajax/libs/js/m.5i5dai.com/registration.min.js': 'public/ajax/libs/js/m.5i5dai.com/registration.js',
+					
+					'public/ajax/libs/js/m.5i5dai.com/app/registration.logic.min.js': 'public/ajax/libs/js/m.5i5dai.com/app/registration.logic.js'
 					
 				}
 				
@@ -311,7 +325,13 @@ module.exports = function (grunt) {
 				
 				'public/ajax/libs/js/m.5i5dai.com/phone.validation.js',
 
-				'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js'
+				'public/ajax/libs/js/m.5i5dai.com/app/phone.validation.logic.js',
+
+				// Registration
+				
+				'public/ajax/libs/js/m.5i5dai.com/registration.js',
+
+				'public/ajax/libs/js/m.5i5dai.com/app/registration.logic.js'
 				
 			]
 			

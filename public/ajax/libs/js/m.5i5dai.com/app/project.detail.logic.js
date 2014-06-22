@@ -34,7 +34,7 @@
  	
  	Creation Date: 2014.06.19 16:18 ( Tony ).
  	
- 	Last Update: 2014.06.19 16:20 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.22 18:30 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -55,10 +55,26 @@ define(function(require) {
       init: function(settings) {
         this.mixture();
       },
-      mixture: function() {
-        $('a[href=#]').on('click', function(e) {
+      helpers: {
+        pdControl: function(e) {
           e.stopPropagation();
           e.preventDefault();
+        },
+        clickOrTouch: function() {
+          var evtName;
+          if (modernizr.touch) {
+            evtName = 'touchstart';
+          } else {
+            evtName = 'click';
+          }
+          return evtName;
+        }
+      },
+      mixture: function() {
+        var helpers;
+        helpers = this.helpers;
+        $('a[href=#]').on(helpers.clickOrTouch(), function(e) {
+          helpers.pdControl(e);
         });
         scroller.excute($(':root'));
       }

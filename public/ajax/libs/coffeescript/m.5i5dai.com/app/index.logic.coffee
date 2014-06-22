@@ -33,7 +33,7 @@
  	
  	Creation Date: 2014.06.18 23:19 ( Tony ).
  	
- 	Last Update: 2014.06.19 16:03 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.22 18:31 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -44,15 +44,15 @@
 
 define (require) ->
 
-	SJ = require('jquery')
-
-	jqMigrate = require('jqMigrate')
-
-	modernizr = require('modernizr')
-
-	infiniteScroll = require('infiniteScroll')
-
-	scroller = require('component/srl.min')
+	SJ             = require 'jquery'
+	
+	jqMigrate      = require 'jqMigrate'
+	
+	modernizr      = require 'modernizr'
+	
+	infiniteScroll = require 'infiniteScroll'
+	
+	scroller       = require 'component/srl.min'
 
 	_fns = ($) ->
 
@@ -62,13 +62,13 @@ define (require) ->
 
 			init: (settings) ->
 
-				this.mixture()
+				@mixture()
 
 				return
 
-			mixture: ->
+			helpers:
 
-				$('a[href=#]').on 'click', (e) ->
+				pdControl: (e) ->
 
 					e.stopPropagation()
 
@@ -76,8 +76,30 @@ define (require) ->
 
 					return
 
+				clickOrTouch: ->
+
+					if modernizr.touch
+
+						evtName = 'touchstart'
+
+					else
+
+						evtName = 'click'
+
+					return evtName
+
+			mixture: ->
+
+				helpers = @helpers
+
+				$('a[href=#]').on helpers.clickOrTouch(), (e) ->
+
+					helpers.pdControl e
+
+					return
+
 				# HTML Scroll
-				scroller.excute $(':root')
+				scroller.excute $ ':root'
 
 				# Infinite Scroll Options
 				infiniteOpts =
@@ -124,8 +146,6 @@ define (require) ->
 
 				# Infinite Scroll Trigger
 				$('.listTable').infinitescroll infiniteOpts, (json, opts) ->
-
-					console.log 'Requsted!'
 
 					return
 

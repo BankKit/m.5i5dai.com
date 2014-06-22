@@ -1,0 +1,131 @@
+extends ../master/master
+
+block title
+
+	title(itemprop='name') 我爱我贷网 · 微站点 · 首页 · 亨元金融
+
+block private-stylesheet
+
+	+importCSS(false, 'css/m.5i5dai.com/registration.css')
+
+block private-head-javascript
+
+block content
+
+	// Registration · Header
+	div.row.wow.fadeInDown
+
+		div.small-24.columns.border_box
+
+			h3 注册
+
+	// Registration · Form
+	form.row.wow.fadeInDown.clearfix(id='frmRegister', class='frmRegister', name='frmRegister', method='POST', action='#')
+
+		div.small-24.columns.border_box.clearfix
+
+
+
+			div.small-24.left.lbl 手机号码
+
+			// Use '.err' class to switch the state of field.
+			div.small-24.columns.border_box.field.round-box-3px.hasBorder
+
+				input(id='iptPhone', class='small-24 iptPhone', name='iptPhone', type='tel')
+
+			div.small-24.left.tip.tip-iptPhone.hide 提示信息 >>>>>>>>>>>>>>>>>>>>>>>>
+
+			div.small-24.left.errorTip.error-iptPhone
+
+
+
+			div.small-24.left.lbl 登录密码
+
+			// Use '.err' class to switch the state of field.
+			div.small-24.columns.border_box.field.round-box-3px.hasBorder
+
+				input(id='iptPassword', class='small-24 iptPassword', name='iptPassword', type='password')
+
+			div.small-24.left.tip.tip-iptPassword.hide 提示信息>>>>>>>>>>>>>>>>>>>>>>>>
+
+			div.small-24.left.errorTip.error-iptPassword
+
+			
+
+			div.small-24.left.lbl 确认密码
+
+			// Use '.err' class to switch the state of field.
+			div.small-24.columns.border_box.field.round-box-3px.hasBorder
+
+				input(id='iptPassDoubleCheck', class='small-24 iptPassDoubleCheck', name='iptPassDoubleCheck', type='password')
+
+			div.small-24.left.tip.tip-iptPassDoubleCheck.hide 提示信息>>>>>>>>>>>>>>>>>>>>>>>>
+
+			div.small-24.left.errorTip.error-iptPassDoubleCheck
+
+			
+
+			div.small-24.left.lbl 邀请码
+
+			// Use '.err' class to switch the state of field.
+			div.small-24.columns.border_box.field.round-box-3px.hasBorder
+
+				input(id='iptInvitationCode', class='small-24 iptInvitationCode', name='iptInvitationCode', type='text')
+
+			div.small-24.left.tip.tip-iptInvitationCode.hide 提示信息>>>>>>>>>>>>>>>>>>>>>>>>
+
+			div.small-24.left.errorTip.error-iptInvitationCode
+
+			
+
+			div.small-24.left.lbl 验证码
+
+			// Use '.err' class to switch the state of field.
+			div.small-16.columns.border_box.round-box-3px.hasBorder.field
+
+				input(id='iptAuthCode', class='small-24 iptAuthCode', name='iptAuthCode', type='text')
+
+			div.small-8.columns.border_box.round-box-3px.no-padding-right.field
+
+				a(class='block small-24 clean-link round-box-3px touch-action btn authCode', href='#', hreflang='zh')
+
+					img(class='left small-24', border='0', src='')
+
+			div.small-24.left.tip.tip-iptAuthCode.hide 提示信息>>>>>>>>>>>>>>>>>>>>>>>>
+
+			div.small-24.left.errorTip.error-iptAuthCode
+
+			
+
+			div.relative.left.border_box.rdoAgreementArea.small-24
+
+				input(id='chkAgreement', class='chkAgreement', name='chkAgreement', type='checkbox')
+
+				label(for='chkAgreement', class='absolute readed') 我已阅读并同意
+
+				a(class='absolute touch-action', href='registration.protocol.min.html', hreflang='zh', title='点击查看《我爱我贷网注册协议》') 《我爱我贷网注册协议》
+
+			div.small-24.left.errorTip.error-chkAgreement
+
+			
+
+			button.block.small-24.left.border_box.round-box-3px.touch-action.btn.submit 下一步
+
+block private-body-script
+
+	+jsloader(false, 'js/m.5i5dai.com/registration.min')
+
+
+// ___________  ______    _____  ___   ___  ___
+//("     _   ")/    " \  (\"   \|"  \ |"  \/"  |
+// )__/  \\__/// ____  \ |.\\   \    | \   \  /
+//	\\_ /  /  /    ) :)|: \.   \\  |  \\  \/
+//	|.  | (: (____/ // |.  \    \. |  /   /
+//	\:  |  \        /  |    \    \ | /   /
+//	 \__|   \"_____/    \___|\____\)|___/ 沈维忠 ( Shen Weizhong / Tony Stark ).
+//
+//* Version: 0.1.0-alpha
+//
+//* Creation Date: 2014.06.22 18:10 ( Tony ).
+//
+//* Last Update: 2014.06.22 22:03 ( Tony ).

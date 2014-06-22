@@ -31,9 +31,9 @@
  	
  	Version: 0.1.0-alpha
  	
- 	Creation Date: 2014.06.20 18:23 ( Tony ).
+ 	Creation Date: 2014.06.22 18:14 ( Tony ).
  	
- 	Last Update: 2014.06.22 18:26 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.22 22:01 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -53,6 +53,8 @@ define (require) ->
 	scroller   = require 'component/srl.min'
 	
 	jqValidate = require 'jquery_validation'
+	
+	scheck     = require 'scheck'
 
 	_fns = ($) ->
 
@@ -63,6 +65,10 @@ define (require) ->
 			init: (settings) ->
 
 				@mixture()
+
+				@checkbox()
+
+				@validation.init()
 
 				return
 
@@ -101,9 +107,31 @@ define (require) ->
 				# HTML Scroll
 				scroller.excute $ ':root'
 
-				@countdown()
+				return
 
-				@validation.init()
+			checkbox: ->
+
+				checkboxOpts =
+
+					checkboxClass: 'studioCheckbox_square-red'
+
+					radioClass: 'studioRadiobox_square-red'
+
+					increaseArea: '0'
+
+				changedCallBack = ->
+
+					return
+
+				unChangedCallBack = ->
+
+					return
+
+				$('#chkAgreement').studioCheck checkboxOpts
+
+				.on 'ifChecked', changedCallBack
+
+				.on 'ifUnchecked', unChangedCallBack
 
 				return
 
@@ -171,6 +199,12 @@ define (require) ->
 							
 						, '不可填写与左边相同的内容。'
 
+						$.validator.addMethod 'password', (value, element) ->
+
+							@optional(element) or /^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W])(?=.*[!@#\$%&/=?_\.,:;-\\]).*$/i.test value
+
+						, '请输入强度较高的密码'
+
 						return
 
 					addDefaults: ->
@@ -179,21 +213,49 @@ define (require) ->
 
 							debug: true
 
+							onfocusin: (element) ->
+
+								tip = $(element).closest('form').find '.tip-' + $(element).attr 'id'
+
+								tip.removeClass 'hide'
+
+								return
+
 							onfocusout: (element) ->
 
-								$(element).valid()
+								$ element
+
+								.valid()
 
 								return
 
 							onkeyup: (element) ->
 
-								$(element).valid()
+								$ element
+
+								.valid()
 
 								return
 
-							success: (error) ->
+							focusCleanup: true
 
-								$(error).remove()
+							success: (error, element) ->
+
+								parent = $(element).parent()
+
+								tip = $(element).closest('form').find '.tip-' + $(element).attr 'id'
+
+								if parent.hasClass 'err'
+
+									parent.removeClass 'err'
+
+								if not tip.hasClass 'hide'
+
+									tip.addClass 'hide'
+
+								$ error
+
+								.remove()
 
 								return
 
@@ -201,7 +263,15 @@ define (require) ->
 
 							errorPlacement: (error, element) ->
 
-								error.appendTo element.parent().parent().find '._' + element.attr 'id'
+								tip = element.closest('form').find '.tip-' + element.attr 'id'
+
+								tip.removeClass 'hide'
+
+								if element.attr('type') isnt 'checkbox'
+
+									element.parent().addClass 'err'
+
+								error.appendTo element.closest('form').find '.error-' + element.attr 'id'
 
 								return
 
@@ -215,23 +285,57 @@ define (require) ->
 
 					@config.addDefaults()
 
-					@frmValiCodeValior()
+					@frmRegisterValior()
 
 					return
 
-				frmValiCodeValior: ->
+				frmRegisterValior: ->
 
-					frmValiCodeValior = $('#frmValiCode').validate
+					frmRegisterValior = $ '#frmRegister'
+
+					.validate
 
 						rules:
 
-							iptValiCode:
+							iptPhone:
 
 								required: true
 
+								phone: true
+
+							iptPassword:
+
+								required: true
+
+								nowhitespace: true
+
+								password: true
+
+							iptPassDoubleCheck:
+
+								required: true
+
+								nowhitespace: true
+
+								password: true
+
+								equalTo: '#iptPassword'
+
+							iptInvitationCode:
+
 								digits: true
 
+								maxlength: 4
+
+							iptAuthCode:
+
+								required: true
+
 								maxlength: 6
+
+							chkAgreement:
+
+								required: true
 
 						submitHandler: (form, event) ->
 
@@ -243,6 +347,8 @@ define (require) ->
 
 								if validationCase.numberOfInvalids() is 0
 
+									$(form).find('button').prop 'disabled', true
+
 									form.submit()
 
 								else
@@ -253,71 +359,13 @@ define (require) ->
 
 							else
 
+								$(form).find('button').prop 'disabled', true
+
 								form.submit()
 
 							return
 
 					return
-
-			countdown: ->
-
-				helpers = @helpers
-
-				resent = $ '.btnResent'
-
-				countdownNum = ->
-
-					resent.children 'span'
-
-				countdownPos = $ '<span/>'
-
-				resentPermission = false
-
-				resent.on helpers.clickOrTouch(), (e) ->
-
-					if not resentPermission
-
-						helpers.pdControl e
-
-					else
-
-						helpers.pdControl e
-
-						resentPermission = false
-
-						resent.empty().append countdownPos
-
-						countdownNum().after '秒后重发'
-
-						countdownNum().text 60
-
-						intervalID_1 = window.setInterval countDown, 1000
-
-					return
-
-				countDown = ->
-
-					i = +countdownNum().text()
-
-					if i is 0
-
-						resent.text '重新发送'
-
-						resentPermission = true
-
-						window.clearInterval intervalID_1
-
-					else
-
-						i--
-
-						countdownNum().text i
-
-					return
-
-				intervalID_1 = window.setInterval countDown, 1000
-
-				return
 
 
 		fnObj.init()

@@ -32,9 +32,9 @@
  	
  	Version: 0.1.0-alpha
  	
- 	Creation Date: 2014.06.20 18:23 ( Tony ).
+ 	Creation Date: 2014.06.22 18:14 ( Tony ).
  	
- 	Last Update: 2014.06.22 18:26 ( Tony ).    ...//TODO: Update the 'Last Update'.
+ 	Last Update: 2014.06.22 22:01 ( Tony ).    ...//TODO: Update the 'Last Update'.
  	
  	Music ( Custom ): Countdown (feat. Makj).mp3    ...//TODO: If you are listenning some music, just write the name of songs.
  	
@@ -43,18 +43,21 @@
  	Copyright: ...//TODO: Give a copyright.
  */
 define(function(require) {
-  var SJ, jqMigrate, jqValidate, modernizr, scroller, _fns;
+  var SJ, jqMigrate, jqValidate, modernizr, scheck, scroller, _fns;
   SJ = require('jquery');
   jqMigrate = require('jqMigrate');
   modernizr = require('modernizr');
   scroller = require('component/srl.min');
   jqValidate = require('jquery_validation');
+  scheck = require('scheck');
   _fns = function($) {
     var fnObj;
     fnObj = {
       config: {},
       init: function(settings) {
         this.mixture();
+        this.checkbox();
+        this.validation.init();
       },
       helpers: {
         pdControl: function(e) {
@@ -78,8 +81,17 @@ define(function(require) {
           helpers.pdControl(e);
         });
         scroller.excute($(':root'));
-        this.countdown();
-        this.validation.init();
+      },
+      checkbox: function() {
+        var changedCallBack, checkboxOpts, unChangedCallBack;
+        checkboxOpts = {
+          checkboxClass: 'studioCheckbox_square-red',
+          radioClass: 'studioRadiobox_square-red',
+          increaseArea: '0'
+        };
+        changedCallBack = function() {};
+        unChangedCallBack = function() {};
+        $('#chkAgreement').studioCheck(checkboxOpts).on('ifChecked', changedCallBack).on('ifUnchecked', unChangedCallBack);
       },
       validation: {
         config: {
@@ -114,22 +126,46 @@ define(function(require) {
             $.validator.addMethod('notEqual', function(value, element, param) {
               return this.optional(element) || value !== $(param).val();
             }, '不可填写与左边相同的内容。');
+            $.validator.addMethod('password', function(value, element) {
+              return this.optional(element) || /^.*(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*[\d\W])(?=.*[!@#\$%&/=?_\.,:;-\\]).*$/i.test(value);
+            }, '请输入强度较高的密码');
           },
           addDefaults: function() {
             $.validator.setDefaults({
               debug: true,
+              onfocusin: function(element) {
+                var tip;
+                tip = $(element).closest('form').find('.tip-' + $(element).attr('id'));
+                tip.removeClass('hide');
+              },
               onfocusout: function(element) {
                 $(element).valid();
               },
               onkeyup: function(element) {
                 $(element).valid();
               },
-              success: function(error) {
+              focusCleanup: true,
+              success: function(error, element) {
+                var parent, tip;
+                parent = $(element).parent();
+                tip = $(element).closest('form').find('.tip-' + $(element).attr('id'));
+                if (parent.hasClass('err')) {
+                  parent.removeClass('err');
+                }
+                if (!tip.hasClass('hide')) {
+                  tip.addClass('hide');
+                }
                 $(error).remove();
               },
               errorElement: 'div',
               errorPlacement: function(error, element) {
-                error.appendTo(element.parent().parent().find('._' + element.attr('id')));
+                var tip;
+                tip = element.closest('form').find('.tip-' + element.attr('id'));
+                tip.removeClass('hide');
+                if (element.attr('type') !== 'checkbox') {
+                  element.parent().addClass('err');
+                }
+                error.appendTo(element.closest('form').find('.error-' + element.attr('id')));
               }
             });
           }
@@ -138,16 +174,37 @@ define(function(require) {
           this.config.addLocalization();
           this.config.addCustomValidation();
           this.config.addDefaults();
-          this.frmValiCodeValior();
+          this.frmRegisterValior();
         },
-        frmValiCodeValior: function() {
-          var frmValiCodeValior;
-          frmValiCodeValior = $('#frmValiCode').validate({
+        frmRegisterValior: function() {
+          var frmRegisterValior;
+          frmRegisterValior = $('#frmRegister').validate({
             rules: {
-              iptValiCode: {
+              iptPhone: {
                 required: true,
+                phone: true
+              },
+              iptPassword: {
+                required: true,
+                nowhitespace: true,
+                password: true
+              },
+              iptPassDoubleCheck: {
+                required: true,
+                nowhitespace: true,
+                password: true,
+                equalTo: '#iptPassword'
+              },
+              iptInvitationCode: {
                 digits: true,
+                maxlength: 4
+              },
+              iptAuthCode: {
+                required: true,
                 maxlength: 6
+              },
+              chkAgreement: {
+                required: true
               }
             },
             submitHandler: function(form, event) {
@@ -155,53 +212,19 @@ define(function(require) {
               if ($('html').hasClass('ie8')) {
                 $(form).valid();
                 if (validationCase.numberOfInvalids() === 0) {
+                  $(form).find('button').prop('disabled', true);
                   form.submit();
                 } else {
                   validationCase.focusInvalid();
                   return false;
                 }
               } else {
+                $(form).find('button').prop('disabled', true);
                 form.submit();
               }
             }
           });
         }
-      },
-      countdown: function() {
-        var countDown, countdownNum, countdownPos, helpers, intervalID_1, resent, resentPermission;
-        helpers = this.helpers;
-        resent = $('.btnResent');
-        countdownNum = function() {
-          return resent.children('span');
-        };
-        countdownPos = $('<span/>');
-        resentPermission = false;
-        resent.on(helpers.clickOrTouch(), function(e) {
-          var intervalID_1;
-          if (!resentPermission) {
-            helpers.pdControl(e);
-          } else {
-            helpers.pdControl(e);
-            resentPermission = false;
-            resent.empty().append(countdownPos);
-            countdownNum().after('秒后重发');
-            countdownNum().text(60);
-            intervalID_1 = window.setInterval(countDown, 1000);
-          }
-        });
-        countDown = function() {
-          var i;
-          i = +countdownNum().text();
-          if (i === 0) {
-            resent.text('重新发送');
-            resentPermission = true;
-            window.clearInterval(intervalID_1);
-          } else {
-            i--;
-            countdownNum().text(i);
-          }
-        };
-        intervalID_1 = window.setInterval(countDown, 1000);
       }
     };
     fnObj.init();
