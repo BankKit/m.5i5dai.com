@@ -42,7 +42,7 @@ m.5i5dai.com/
 │   ├── *.xml
 │   ├── ...
 │   ├── README.md
-├── **public**
+├── public
 │   ├── ajax
 │   │   ├── libs
 │   │   │   ├── coffeescript
