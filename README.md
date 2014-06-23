@@ -16,43 +16,43 @@
 
 ```
 m.5i5dai.com/
-├── .git
-├── .sass-cache
-├── bat
-│   ├── jade
+├── [.git]
+├── [.sass-cache]
+├── [bat]
+│   ├── [jade]
 │   │   ├── *.bat
 │   │   ├── ...
 │   │   ├── README.md
-│   ├── project
+│   ├── [project]
 │   │   ├── *.bat
 │   │   ├── ...
 │   │   ├── README.md
-│   ├── sass
+│   ├── [sass]
 │   │   ├── *.bat
 │   │   ├── ...
 │   │   ├── README.md
 │   ├── ...
 │   ├── root.direct.bat
 │   ├── README.md
-├── doc
+├── [doc]
 │   ├── ...
 │   ├── README.md
-├── node_modules
-├── notifications
+├── [node_modules]
+├── [notifications]
 │   ├── *.xml
 │   ├── ...
 │   ├── README.md
-├── public
-│   ├── ajax
-│   │   ├── libs
-│   │   │   ├── coffeescript
-|   |   |   |   ├── m.5i5dai.com
-|   |   |   |   |   ├── app
+├── [public]
+│   ├── [ajax]
+│   │   ├── [libs]
+│   │   │   ├── [coffeescript]
+|   |   |   |   ├── [m.5i5dai.com]
+|   |   |   |   |   ├── [app]
 |   |   |   |   |   |   ├── *.logic.coffee
 |   |   |   |   |   |   ├── *.logic.min.coffee
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── component
+|   |   |   |   |   ├── [component]
 |   |   |   |   |   |   ├── *.coffee
 |   |   |   |   |   |   ├── *.min.coffee
 |   |   |   |   |   |   ├── ...
@@ -60,30 +60,30 @@ m.5i5dai.com/
 |   |   |   |   |   ├── *.coffee
 |   |   |   |   |   ├── *.min.coffee
 |   |   |   |   |   ├── README.md
-|   |   |   |   ├── m.5i5dai.com_framework
+|   |   |   |   ├── [m.5i5dai.com_framework]
 |   |   |   |   |   ├── ...
 |   |   |   |   |   ├── README.md
 |   |   |   |   ├── ...
 |   |   |   |   ├── README.md
-│   │   │   ├── css
-|   |   |   |   ├── m.5i5dai.com
+│   │   │   ├── [css]
+|   |   |   |   ├── [m.5i5dai.com]
 |   |   |   |   |   ├── *.css
 |   |   |   |   |   ├── ...
 |   |   |   |   |   ├── README.md
-|   |   |   |   ├── m.5i5dai.com_framework
-|   |   |   |   |   ├── base
+|   |   |   |   ├── [m.5i5dai.com_framework]
+|   |   |   |   |   ├── [base]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── component
+|   |   |   |   |   ├── [component]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── media_query
+|   |   |   |   |   ├── [media_query]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── scaffolding
+|   |   |   |   |   ├── [scaffolding]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
@@ -92,27 +92,27 @@ m.5i5dai.com/
 |   |   |   |   |   ├── README.md
 |   |   |   |   ├── ...
 |   |   |   |   ├── README.md
-│   │   │   ├── font
+│   │   │   ├── [font]
 |   |   |   |   ├── ...
 |   |   |   |   ├── README.md
-│   │   │   ├── img
-|   |   |   |   ├── m.5i5dai.com
+│   │   │   ├── [img]
+|   |   |   |   ├── [m.5i5dai.com]
 |   |   |   |   |   ├── *.png
 |   |   |   |   |   ├── * @2x.png
 |   |   |   |   |   ├── ...
 |   |   |   |   |   ├── README.md
-|   |   |   |   ├── m.5i5dai.com_framework
-|   |   |   |   |   ├── component
+|   |   |   |   ├── [m.5i5dai.com_framework]
+|   |   |   |   |   ├── [component]
 |   |   |   |   |   |   ├── *.png
 |   |   |   |   |   |   ├── * @2x.png
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── icon
+|   |   |   |   |   ├── [icon]
 |   |   |   |   |   |   ├── *.png
 |   |   |   |   |   |   ├── * @2x.png
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── texture
+|   |   |   |   |   ├── [texture]
 |   |   |   |   |   |   ├── *.png
 |   |   |   |   |   |   ├── * @2x.png
 |   |   |   |   |   |   ├── ...
@@ -121,14 +121,14 @@ m.5i5dai.com/
 |   |   |   |   |   ├── README.md
 |   |   |   |   ├── ...
 |   |   |   |   ├── README.md
-│   │   │   ├── js
-|   |   |   |   ├── m.5i5dai.com
-|   |   |   |   |   ├── app
+│   │   │   ├── [js]
+|   |   |   |   ├── [m.5i5dai.com]
+|   |   |   |   |   ├── [app]
 |   |   |   |   |   |   ├── *.logic.js
 |   |   |   |   |   |   ├── *.logic.min.js
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── component
+|   |   |   |   |   ├── [component]
 |   |   |   |   |   |   ├── *.js
 |   |   |   |   |   |   ├── *.min.js
 |   |   |   |   |   |   ├── ...
@@ -136,30 +136,30 @@ m.5i5dai.com/
 |   |   |   |   |   ├── *.js
 |   |   |   |   |   ├── *.min.js
 |   |   |   |   |   ├── README.md
-|   |   |   |   ├── m.5i5dai.com_framework
+|   |   |   |   ├── [m.5i5dai.com_framework]
 |   |   |   |   |   ├── ...
 |   |   |   |   |   ├── README.md
 |   |   |   |   ├── ...
 |   |   |   |   ├── README.md
-│   │   │   ├── scss
-|   |   |   |   ├── m.5i5dai.com
+│   │   │   ├── [scss]
+|   |   |   |   ├── [m.5i5dai.com]
 |   |   |   |   |   ├── *.scss
 |   |   |   |   |   ├── ...
 |   |   |   |   |   ├── README.md
-|   |   |   |   ├── m.5i5dai.com_framework
-|   |   |   |   |   ├── base
+|   |   |   |   ├── [m.5i5dai.com_framework]
+|   |   |   |   |   ├── [base]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── component
+|   |   |   |   |   ├── [component]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── media_query
+|   |   |   |   |   ├── [media_query]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
-|   |   |   |   |   ├── scaffolding
+|   |   |   |   |   ├── [scaffolding]
 |   |   |   |   |   |   ├── *.scss
 |   |   |   |   |   |   ├── ...
 |   |   |   |   |   |   ├── README.md
@@ -172,34 +172,34 @@ m.5i5dai.com/
 │   │   │   ├── README.md
 │   │   ├── README.md
 │   ├── README.md
-├── sitemap
+├── [sitemap]
 │   ├── *.xml
 │   ├── ...
 │   ├── README.md
-├── view
-│   ├── html
+├── [view]
+│   ├── [html]
 │   │   ├── *.html
 │   │   ├── *.min.html
 │   │   ├── ...
 │   │   ├── README.md
-│   ├── jade
-│   │   ├── component
+│   ├── [jade]
+│   │   ├── [component]
 │   │   │   ├── *.jade
 │   │   │   ├── ...
 │   │   │   ├── README.md
-│   │   ├── master
+│   │   ├── [master]
 │   │   │   ├── *.jade
 │   │   │   ├── ...
 │   │   │   ├── README.md
-│   │   ├── snippet
+│   │   ├── [snippet]
 │   │   │   ├── *.jade
 │   │   │   ├── ...
 │   │   │   ├── README.md
-│   │   ├── ui
+│   │   ├── [ui]
 │   │   │   ├── *.jade
 │   │   │   ├── ...
 │   │   │   ├── README.md
-│   │   ├── unit
+│   │   ├── [unit]
 │   │   │   ├── *.jade
 │   │   │   ├── ...
 │   │   │   ├── README.md
