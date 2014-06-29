@@ -98,7 +98,7 @@ module.exports = function (grunt) {
 					
 					check: false,
 					
-					style: 'nested',		// Can be nested, compact, compressed, expanded.
+					style: 'compressed',		// Can be nested, compact, compressed, expanded.
 					
 					precision: 6,
 					
