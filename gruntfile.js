@@ -168,7 +168,7 @@ module.exports = function (grunt) {
 			
 		},
 		
-		//TODO: CoffeeScript
+		//TODO[X]: CoffeeScript
 		coffee: {
 			
 			compileBare: {
