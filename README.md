@@ -3,7 +3,7 @@
 
 我爱我贷网微站点 ( Hengyuan Finance, 5i5dai WeChat Site, Front-end Project )
 
-[文件夹 · 文件 · 结构]( '点击查看')
+[文件夹 · 文件 · 结构](https://github.com/Hengyuan-Finance/m.5i5dai.com/blob/master/FOLDER%20STRUCTURE.md '点击查看')
 
 
 
