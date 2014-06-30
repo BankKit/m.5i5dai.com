@@ -213,6 +213,7 @@ m.5i5dai.com/
 ├── crossdomain.xml
 ├── gruntfile.js
 ├── package.json
+├── FOLDER STRUCTURE.md
 ├── HELPER.md
 ├── QUERY.STRING.md
 ├── LICENSE
