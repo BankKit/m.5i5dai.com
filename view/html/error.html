@@ -324,7 +324,7 @@
     
     Creation Date: ~ ( Tony ).
     
-    Last Update: 2014.06.13 16:16 ( Tony ).
+    Last Update: 2014.06.13 13:33 ( Tony ).
     
     -->
     <!-- Default Iteration--><!--[if (gte IE 6)&(lte IE 9)]>
@@ -337,50 +337,40 @@
         <script src="//resource.fenqimall.com/ajax/libs/js/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
         <script src="//resource.fenqimall.com/ajax/libs/js/modernizr/2.7.0/modernizr.min.js"></script>
         <script src="../../public/ajax/libs/js/wow/0.1.6/wow.min.js"></script>
-    <script>
-      var _wow_init = (function () {
-      
-       var isIE, isGteIE9;
-       
-       isIE = function() {
-        var agent = navigator.userAgent.toLowerCase();
-        return !!agent.match(/msie/i);
-       };
-       
-       isGteIE9 = function () {
-       
-        var agent = navigator.userAgent.toLowerCase(),
-         match = agent.match(/msie\D*([\.\d]*)/i),
-         version = 0;
-        if (match && match[1]) {
-         version = match[1];
-        }
-        return version >= 9;
-        
-       };
-       
-       return {
-       
-        init: function () {
-        
-         if (isIE()) {
-         
-          if (isGteIE9()) {new WOW().init();}
-          
-         } else {
-         
-          new WOW().init();
-          
-         }
-         
-        }
-        
-       };
-       
-      } ()).init();
-      
-      
-      
+    <script>(function() {
+  var init, isGteIE9, isIE;
+
+  isIE = function() {
+    var agent;
+    agent = navigator.userAgent.toLowerCase();
+    return !!agent.match(/msie/i);
+  };
+
+  isGteIE9 = function() {
+    var agent, match, version;
+    agent = navigator.userAgent.toLowerCase();
+    match = agent.match(/msie\D*([\.\d]*)/i);
+    version = 0;
+    if (match && match[1]) {
+      version = match[1];
+    }
+    return version >= 9;
+  };
+
+  init = function() {
+    if (isIE()) {
+      if (isGteIE9()) {
+        new WOW().init();
+      }
+    } else {
+      new WOW().init();
+    }
+  };
+
+  init();
+
+}).call(this);
+
     </script>
     <!-- Custom Iteration, Here-->
     <!-- Private javascript snippet which need to be put in the '<head/>' tag.-->

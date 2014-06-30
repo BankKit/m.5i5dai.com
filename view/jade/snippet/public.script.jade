@@ -77,7 +77,7 @@
 
 	Creation Date: ~ ( Tony ).
 
-	Last Update: 2014.06.13 16:16 ( Tony ).
+	Last Update: 2014.06.30 13:33 ( Tony ).
 
 - var _default = {html5shiv: {active: true, script: true, condition: [true, 'if (gte IE 6)&(lte IE 9)]', '[endif'], _defer: 'false', url: staticCDNBaseUrl + 'js/html5shiv/3.7.2/html5shiv.min.js'}, modernizr: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticCDNBaseUrl + 'js/modernizr/2.7.0/modernizr.min.js'}, wow: {active: true, script: false, condition: [false, '', ''], _defer: 'true', url: staticBaseUrl + 'js/wow/0.1.6/wow.min.js'}}
 
@@ -144,57 +144,45 @@ mixin judgement (index, val)
 
 
 
-script.
+script
 
-	var _wow_init = (function () {
+	:coffeescript
 
-		var isIE, isGteIE9;
+		isIE = ->
 
-		isIE = function() {
-			
-			var agent = navigator.userAgent.toLowerCase();
-			
-			return !!agent.match(/msie/i);
-			
-		};
+			agent = navigator.userAgent.toLowerCase()
 
-		isGteIE9 = function () {
+			!!agent.match(/msie/i)
 
-			var agent = navigator.userAgent.toLowerCase(),
-				
-				match = agent.match(/msie\D*([\.\d]*)/i),
-				
-				version = 0;
-			
-			if (match && match[1]) {
-				
-				version = match[1];
-				
-			}
-			
-			return version >= 9;
+		isGteIE9 = ->
 
-		};
+			agent = navigator.userAgent.toLowerCase()
 
-		return {
+			match = agent.match(/msie\D*([\.\d]*)/i)
 
-			init: function () {
+			version = 0
 
-				if (isIE()) {
+			if match and match[1]
 
-					if (isGteIE9()) {new WOW().init();}
+				version = match[1]
 
-				} else {
+			version >= 9
 
-					new WOW().init();
+		init = ->
 
-				}
+			if isIE()
 
-			}
+				if isGteIE9()
 
-		};
+					new WOW().init()
 
-	} ()).init();
+			else
+
+				new WOW().init()
+
+			return
+
+		init()
 
 
 
