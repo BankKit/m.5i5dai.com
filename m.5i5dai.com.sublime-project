@@ -1,17 +1,25 @@
 {
-	"folders":
-	[
-		{
-			"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/fenqimall.com"
-		},
-		{
-			"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/Investment-Site"
-		},
-		{
-			"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/m.5i5dai.com"
-		},
-		{
-			"path": "/C/NODE"
-		}
-	]
+	
+	"folders": [{
+		
+		"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/icon.dropdown.animation"
+		
+	}, {
+		
+		"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/fenqimall.com"
+		
+	}, {
+		
+		"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/Investment-Site"
+		
+	}, {
+		
+		"path": "/D/Regular/Development/Apache Software Foundation/Tomcat/webapps/DROPBOX/Browser Side Workspace/m.5i5dai.com"
+		
+	}, {
+		
+		"path": "/C/NODE"
+		
+	}]
+	
 }
